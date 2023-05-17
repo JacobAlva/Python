@@ -28,3 +28,42 @@ compound = (principal * ((1 + (rate / num_of_t)) ** (num_of_t * period)))
 print("\n************************")
 print(f'Your compound interest on ${principal:.2f} after {period:.0f} years at an annual rate of {rate:.0%} is ${compound:.2f}')
 """
+
+
+# BMI Calculator
+"""
+# Jacob Alebiosu
+# Chapter 3, Question # 14, p. 163, Body Mass Index
+# ICS 698
+# SU-2023
+
+# Pseudocode
+# Ask the user to enter their weight and convert from "string" to "float"
+# Ask the user to enter their height and convert from "string" to "float"
+# Assign magic number 703 to k
+# Calculate the BMI using the formula (weight * (k / (height ** 2)))
+# Check if BMI is between 18.5 and 25 and display "Your weight is optimal" if true
+# Else, check if BMI is greater than 25 and display "You are overweight"
+# Else, display "You are underweight"
+
+# Accept user weight and height
+weight = float(input("Enter your weight in pounds: "))
+height = float(input("Enter your height in inches: "))
+
+# Assign constant k
+k = 703
+
+# Calculate BMI 
+BMI = (weight * (k / (height ** 2)))
+
+# Compare BMI against optimal value and display user's category
+if 18.5 <= BMI <= 25:
+    print("Your BMI is:", format(BMI,'.2f'), "Your weight is optimal")
+elif BMI > 25:
+    print("Your BMI is:", format(BMI,'.2f'), "You are overweight")
+else:
+    print("Your BMI is:", format(BMI,'.2f'), "You are underweight")
+    print(f'Your BMI is: {BMI:.2f}. You are underweight')
+"""
+
+# BMI calc update tomorrow.
