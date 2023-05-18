@@ -66,4 +66,20 @@ else:
     print(f'Your BMI is: {BMI:.2f}. You are underweight')
 """
 
-# BMI calc update tomorrow.
+# While Loop
+"""
+product = 0
+while product < 100:
+    num = int(input("Please enter a number: "))
+    product = num * 10
+    print(product)
+"""
+
+# for loop
+"""
+#for num in [1, 2, 3, 4]:
+#    print(num * 5)
+x=3
+for num in range(1,10,7):
+    print(x)
+"""
