@@ -100,3 +100,40 @@ h = int(input("Height:"))
 print("The volume of the rectangular prism is " + str(rec_vol(l,w,h)))
 """
 
+
+# String comparison
+"""
+age = 1344
+print(f'Your age is {age:10}')
+
+x = 'got'
+y = 'ys'
+if x > y:
+    print(y)
+    print(x)
+else:
+    print(x)
+    print(y)
+
+print('Pizza' == 'pizza' or 100 == 1010.00)
+"""
+
+
+# While Loop
+"""
+product = 0
+while product < 100:
+    num = int(input("Please enter a number: "))
+    product = num * 10
+    print(product)
+"""
+
+# for loop
+"""
+#for num in [1, 2, 3, 4]:
+#    print(num * 5)
+x=3
+for num in range(1,10,7):
+    print(x)
+"""
+
