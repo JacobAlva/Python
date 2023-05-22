@@ -98,5 +98,19 @@ for i in range(21):
 """
 
 
+# Tuition increase #CH4 Q10
+""""""
+# Jacob Alebiosu
+# Chapter 4, Question # 10, p. 215, Tuition Increase
+# ICS 698
+# SU-2023
+
+# Pseudocode
+# Assign 8000 to "tuition" variable as the initial tuition value
+# Display initial tuition
+# Initialize a for loop from range 1 to 6
+# Calculate the new tuition with the increment using the formula (0.03 * tuition) + tuition
+# Display the projected tuition and the corresponding year
+# Repeat the loop and increment the tuition  until the iteration is complete
 
 
