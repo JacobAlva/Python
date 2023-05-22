@@ -67,8 +67,7 @@ else:
 """
 
 
-
-# Temp converter
+# Temp converter #CH4 Q6
 """
 # Jacob Alebiosu
 # Chapter 4, Question # 6, p. 214 Celsius to Fahrenheit
@@ -97,6 +96,7 @@ for i in range(21):
     # display result
     print(f'{i} \t \t \t  {fahrenheit:.1f}')
 """
+
 
 
 
