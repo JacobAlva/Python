@@ -30,7 +30,7 @@ print(f'Your compound interest on ${principal:.2f} after {period:.0f} years at a
 """
 
 
-# BMI Calculator
+# BMI Calculator CH3 Q14
 """
 # Jacob Alebiosu
 # Chapter 3, Question # 14, p. 163, Body Mass Index
@@ -65,4 +65,38 @@ else:
     print("Your BMI is:", format(BMI,'.2f'), "You are underweight")
     print(f'Your BMI is: {BMI:.2f}. You are underweight')
 """
+
+
+
+# Temp converter
+"""
+# Jacob Alebiosu
+# Chapter 4, Question # 6, p. 214 Celsius to Fahrenheit
+# ICS 698
+# SU-2023
+
+# Pseudocode
+# Assign the value 32 to variable k
+# Display the Celsius and Fahrenheit table headers
+# Use the for loop's range function to iterate from 0 to 20 celsius
+# Calculate the fahrenheit equivalent using the formula (((9/5) * i) + k)
+# Display the Celsius and Fahrenheit values
+
+# Assign 32 to constant k
+k = 32
+
+# Display table header
+print("Celsius \t Fahrenheit")
+
+# Initialize for loop
+for i in range(21):
+    # convert from celsius to fahrenheit
+    fahrenheit = (((9/5) * i) + k)
+    #print("For temp ", i, "Celsius, the Fahrenheit eqv is ", format(fahrenheit,'.2f'))
+    
+    # display result
+    print(f'{i} \t \t \t  {fahrenheit:.1f}')
+"""
+
+
 
