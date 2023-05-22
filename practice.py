@@ -169,3 +169,18 @@ num = 1234567.456
 print(f'{num:,.1f}')
 """
 
+# Get a salesperson's sales and commission rate.
+"""
+while True:
+    try:
+        sales = float(input('Enter the amount of sales: '))
+        comm_rate = float(input('Enter the commission rate: '))
+        # Calculate the commission.
+        commission = sales * comm_rate
+        # Display the commission.
+        print('The commission is $', format(commission, ',.2f'), sep='')
+        break
+    except:
+        print("Please enter a valid input.")
+"""
+
