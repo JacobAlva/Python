@@ -137,3 +137,35 @@ for num in range(1,10,7):
     print(x)
 """
 
+# While Loop (Condition-controlled pretest Loop)
+"""
+counter = int(input('Enter number:'))
+a = counter
+summed = 0
+
+while counter > 0:
+    summed += counter
+    counter-=1
+print(summed)
+"""
+
+# For loop (Count-controlled pretest loop)
+"""
+strn = input('please enter your word:')
+sum = 0
+for char in strn:
+    sum += 1
+
+print(strn, "\n", "The number of characters in this string are: ", sum)
+
+tr = range(5,10)
+for a in tr:
+    print(a)
+"""
+
+# float decimal format and approx
+"""
+num = 1234567.456
+print(f'{num:,.1f}')
+"""
+
