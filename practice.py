@@ -184,3 +184,37 @@ while True:
         print("Please enter a valid input.")
 """
 
+# Score grader
+"""
+score = int(input("Please enter your score: "))
+
+if score >= 90:
+    print("Your score is ", score, "and your grade is A")
+elif score >= 80:
+    print("Your score is ", score, "and your grade is B")
+elif score >= 70:
+    print("Your score is ", score, "and your grade is C")
+elif score >= 60:
+    print("Your score is ", score, "and your grade is D")
+else:
+    print("Your score is ", score, "and your grade is F")
+"""
+
+# While loop
+"""
+product = 0
+while product < 100:
+    num = int(input("Please enter a number: "))
+    product = num * 10
+    print(product)
+"""
+
+# for loop
+"""
+#for num in [1, 2, 3, 4]:
+#    print(num * 5)
+x=3
+for num in range(1,10,7):
+    print(x)
+"""
+
