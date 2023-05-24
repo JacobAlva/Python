@@ -99,7 +99,7 @@ for i in range(21):
 
 
 # Tuition increase #CH4 Q10
-""""""
+"""
 # Jacob Alebiosu
 # Chapter 4, Question # 10, p. 215, Tuition Increase
 # ICS 698
@@ -112,5 +112,18 @@ for i in range(21):
 # Calculate the new tuition with the increment using the formula (0.03 * tuition) + tuition
 # Display the projected tuition and the corresponding year
 # Repeat the loop and increment the tuition  until the iteration is complete
+
+# Tuition fee
+tuition = 8000
+
+# Display initial tuition fee
+print(f"The initial tuition for the Year is ${tuition:.2f}")
+
+# initialize for loop to iterate from 1 to 6
+for year in range(1, 6):
+    tuition = (0.03 * tuition) + tuition
+    print(f'The projected tuition for Year {year} is ${tuition:.2f}')
+
+"""
 
 
