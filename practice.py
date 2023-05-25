@@ -218,3 +218,20 @@ for num in range(1,10,7):
     print(x)
 """
 
+# User controlled for loop
+"""
+init_value = int(input("Please enter the initial value: "))
+lim = int(input("Please enter the ending limit: "))
+step_val = int(input("Please enter the stepping value: "))
+
+for x in range(init_value,lim, step_val):
+    print(x)
+"""
+
+# Table using "For"
+"""
+cost = 1
+print("PID \t Cost")
+for i in range (1, 6):
+    print(i, " \t \t $", i * 5)
+"""
