@@ -235,3 +235,23 @@ print("PID \t Cost")
 for i in range (1, 6):
     print(i, " \t \t $", i * 5)
 """
+
+
+# Class average - for Loop
+"""
+total = 0
+number_of_students = int(input("Please enter the number of students in your class: "))
+
+for x in range(number_of_students):
+    student_score = float(input("Please enter the student score: "))
+    total = total + student_score
+
+average_score = total / number_of_students
+
+print(f'You have a total of {number_of_students} students in your class')
+print(f'The total score of the {number_of_students} students is {total:.2f}')
+print(f"The average score for the {number_of_students} students is {average_score:.2f}")
+"""
+
+
+
