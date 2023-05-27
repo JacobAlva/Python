@@ -253,5 +253,22 @@ print(f'The total score of the {number_of_students} students is {total:.2f}')
 print(f"The average score for the {number_of_students} students is {average_score:.2f}")
 """
 
+# Input validation - While loop (condition based)
+"""
+age = float(input("Please enter your age: "))
 
+while 0 < age > 125:
+    print("Please enter a valid age: ")
+    age = float(input("Please enter your age: "))
+
+print("Your age is: ", age)
+"""
+
+# Iterating loop (for)
+"""
+for i in range(5):
+    print(i)
+    for j in range(5):
+        print(i, "x", j, "=", i*j)
+"""
 
