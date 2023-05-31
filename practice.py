@@ -288,3 +288,15 @@ def main():
     yourPrint()
 """
 
+
+# String compare operations
+"""
+s = "New York"
+y = "Boston"
+if s>y:
+    print(s)
+else:
+    print(y)
+"""
+
+
