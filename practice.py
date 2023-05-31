@@ -272,3 +272,19 @@ for i in range(5):
         print(i, "x", j, "=", i*j)
 """
 
+# ***************************
+### CHAPTER 5 - FUNCTIONS ###
+
+# Function declaration and call
+"""
+def myPrint():
+    print("Hello World")
+
+def yourPrint():
+    print("Hello Charlotte my love ^:)^")
+
+def main():
+    myPrint()
+    yourPrint()
+"""
+
