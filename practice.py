@@ -300,3 +300,63 @@ else:
 """
 
 
+# Class Example - for loop
+"""
+def foo():
+    a = 10
+    b = 20
+    c = 0
+    for i in range (3):
+        c += (a+b)
+        print(c)
+foo()
+"""
+
+# Passing Arguments to Functions
+"""
+def main():
+    a = 5
+    b = 6
+    #show_double(a)
+    my_add(a, b)
+    #my_sub(a, b)
+    #my_mul(a, b)
+    #my_div(a, b)
+    #print("r=", a, "b= ", b)
+    total = my_add(a, b)
+    print("Total = ", total)
+
+# def show_double(number):
+#     result = number * 2
+#     print(result)
+#     return result
+
+def my_add(x, y):
+    print(x + y)
+    return (x + y)
+
+def my_sub(x, y):
+    if x > y:
+        print(x - y)
+    else:
+        print(y - x)
+
+def my_mul (x, y):
+    print(x * y)
+
+def my_div(x, y):
+    """"""
+    if y != 0:
+        print(x/y)
+    else:
+        print("You cannot divide by zero")
+    """"""
+    while y == 0:
+        print("You cannot divide by zero")
+        y = int(input("Enter a value for b: "))
+    print(format(x/y,'.2f'))
+
+main()
+
+"""
+
