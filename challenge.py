@@ -127,3 +127,41 @@ for year in range(1, 6):
 """
 
 
+# Test Average and Grade CH5Q15
+"""
+# Jacob Alebiosu
+# Chapter 5, Question # 15, p. 297, Test Average and Grade
+# ICS 698
+# SU-2023
+
+# Pseudocode
+# define the calc_average function to find the average of grades using the formula average = (a + b + c + d + e)/5
+# define the determine_grade function to return the grade of a score range
+# define the main() function
+# ask the user to enter the five grades
+# call the "calc_average" function to find the average and assign it to average_grade
+# display average grade
+# display the equivalent grade of each score
+
+# function to calculate average score
+def calc_average(a,b,c,d,e):
+    average = (a + b + c + d + e)/5
+    return average
+
+# function to classify a score and return its grade
+def determine_grade(score):
+    if 90 <= score <= 100 :
+        grade = "A"
+    elif 80 <= score < 90:
+        grade = "B"
+    elif 70 <= score < 80:
+        grade = "C"
+    elif 60 <= score < 70:
+        grade = "D"
+    elif 0 <= score < 60:
+        grade = "F"
+    else:
+        grade = "Invalid grade"
+    return grade
+
+"""
