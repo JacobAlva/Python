@@ -164,4 +164,49 @@ def determine_grade(score):
         grade = "Invalid grade"
     return grade
 
+def main():
+
+    # get the five scores from user and cast to float
+    # validate that the score is valid between 0 and 100
+
+    first_score = float(input("Enter the first score: "))
+    while (first_score < 0 or first_score > 100):
+        print("Score should be a value between 0 and 100")
+        first_score = float(input("Please enter the first score: "))
+
+    second_score = float(input("Enter the second score: "))
+    while (second_score < 0 or second_score > 100):
+        print("Score should be a value between 0 and 100")
+        second_score = float(input("Please enter the second score: "))
+
+    third_score = float(input("Enter the third score: "))
+    while (third_score < 0 or third_score > 100):
+        print("Score should be a value between 0 and 100")
+        third_score = float(input("Please enter the third score: "))
+
+    fourth_score = float(input("Enter the fourth score: "))
+    while (fourth_score < 0 or fourth_score > 100):
+        print("Score should be a value between 0 and 100")
+        fourth_score = float(input("Please enter the fourth score: "))
+
+    fifth_score = float(input("Enter the fifth score: "))
+    while (fifth_score < 0 or fifth_score > 100):
+        print("Score should be a value between 0 and 100")
+        fifth_score = float(input("Please enter the fifth score: "))
+    
+    # find the average by calling the average_score function 
+    average_score = calc_average(first_score, second_score, third_score, fourth_score, fifth_score)
+    
+    # display the overall average score and grade for each student
+    print(f'\t--------------------- \n The average score is {average_score}\n\t---------------------')
+    print(f'Score \t \t Grade')
+    print(f'{first_score} \t \t {determine_grade(first_score)}')
+    print(f'{second_score} \t \t {determine_grade(second_score)}')
+    print(f'{third_score} \t \t {determine_grade(third_score)}')
+    print(f'{fourth_score} \t \t {determine_grade(fourth_score)}')
+    print(f'{fifth_score} \t \t {determine_grade(fifth_score)}')
+
+# call the function
+if __name__ =='__main__':
+    main()
 """
