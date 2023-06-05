@@ -210,3 +210,50 @@ def main():
 if __name__ =='__main__':
     main()
 """
+
+
+# Odd/Even Counter #CH5Q16
+"""
+# Jacob Alebiosu
+# Chapter 5, Question # 297, p. 297, Odd/Even Counter
+# ICS 698
+# SU-2023
+
+# Pseudocode
+# import the random module
+# define a function to check for even or odd numbers and return true or false
+# define a function to count to 100 and generate a random number on each iteration
+# check if the random number is even or odd using the even_checker function
+# declare two variables to be used as accumulators for each count of even or odd numbers
+# return the accumulated value of both even and odd numbers
+# display the result.
+
+import random
+
+# check if number is even or odd
+def even_checker(number):
+    if (number % 2) == 0:
+        status = True
+    else:
+        status = False
+    return status
+
+# function to generate 100 random numbers and count the odd and even numbers
+def random_generator():
+    even_count = 0
+    odd_count = 0
+
+    # loop to generate 100 random numbers and return the count of odd and even numbers
+    for count in range(100):
+        random_number = random.randint(1,100)
+        print(random_number, end=", ")
+
+        #check if random number is even or odd and count
+        if even_checker(random_number):
+            even_count += 1
+        else:
+            odd_count += 1
+
+    return even_count, odd_count
+"""
+
