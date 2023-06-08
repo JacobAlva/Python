@@ -255,5 +255,19 @@ def random_generator():
             odd_count += 1
 
     return even_count, odd_count
+
+# declare the main function
+def main():
+    # get the results from the random_generator() function
+    even, odd = random_generator()
+
+    # display the result
+    print(f'\nCount of numbers generated: {100}')
+    print(f'Count of even numbers: {even}')
+    print(f'Count of odd numbers: {odd}')
+
+# call the main function
+if __name__ == '__main__':
+    main()
 """
 
