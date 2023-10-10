@@ -302,3 +302,12 @@ def main():
 
     # test for float by replacing one '.' from input value and check if it returns a digit
     b = get_monthly_interest.replace('.', '', 1)
+
+    # request new input while current input is invalid
+    while b.isdigit() == False:
+        print("Interest rate should be in digits")
+        get_monthly_interest = input("Enter the monthly interest rate (e.g. 5 for 5% not 0.05: ")
+        b = get_monthly_interest.replace('.', '', 1)
+
+    # cast input to float, divide by 100 and assign to variable
+    monthly_interest = float(get_monthly_interest)/100
