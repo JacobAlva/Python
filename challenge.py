@@ -273,6 +273,18 @@ if __name__ == '__main__':
 
 
 # Future Value #CH5Q19
+"""
+#Chapter 5, Question # 19, p. 298, Future Value
+# ICS 698
+# SU-2023
+
+# Pseudocode
+# Define the future_value function to calculate and return the future value using the formula (a * ((1 + b) ** c))
+# Get the present amount of the user and typecast to float after validating the input
+# Get the monthly interest rate, validate the input, typecast to float and divide by 100
+# Get the period from the user, validate the input and typecast to int
+# Determine the future value by calling the future_value function
+# Display the result.
 
 # Generate future value
 
@@ -330,3 +342,7 @@ def main():
 # Call the main function
 if __name__ == '__main__':
     main()
+"""
+
+
+
