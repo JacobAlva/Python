@@ -311,3 +311,18 @@ def main():
 
     # cast input to float, divide by 100 and assign to variable
     monthly_interest = float(get_monthly_interest)/100
+
+    # get the total number of months
+    get_time = input("Enter the total number of months: ")
+
+    # input validation
+    while get_time.isdigit() == False:
+        print("Total number of months should be in digits")
+        get_time = input("Enter the total number of months ")
+    time = int(get_time)
+
+    # Calculate future value with the future_value function
+    f_value = future_value(present_value,monthly_interest,time)
+
+    # Display result
+    print(f'\n***************\nThe future value of the account is ${f_value:.2f}')
