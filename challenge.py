@@ -271,3 +271,25 @@ if __name__ == '__main__':
     main()
 """
 
+
+# Future Value #CH5Q19
+
+# Generate future value
+
+def future_value(a,b,c):
+    fval = (a * ((1 + b) ** c))
+    return fval
+
+def main():
+
+    # Get present value in account
+    get_present_value = input("Enter the present amount in the account: ")
+
+    # test for float by replacing one '.' from input value and check if it returns a digit
+    a = get_present_value.replace('.', '', 1)
+
+    # request new input while current input is invalid
+    while a.isdigit() == False:
+        print("Present amount should be in digits")
+        get_present_value = input("Enter present amount in the account: ")
+        a = get_present_value.replace('.', '', 1)
