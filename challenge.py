@@ -293,3 +293,12 @@ def main():
         print("Present amount should be in digits")
         get_present_value = input("Enter present amount in the account: ")
         a = get_present_value.replace('.', '', 1)
+
+    # cast input to float and assign to variable
+    present_value = float(get_present_value)
+
+    # Get monthly interest
+    get_monthly_interest = input("Enter the monthly interest rate (e.g. 5 for 5% not 0.05): ")
+
+    # test for float by replacing one '.' from input value and check if it returns a digit
+    b = get_monthly_interest.replace('.', '', 1)
