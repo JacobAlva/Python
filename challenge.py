@@ -326,3 +326,7 @@ def main():
 
     # Display result
     print(f'\n***************\nThe future value of the account is ${f_value:.2f}')
+
+# Call the main function
+if __name__ == '__main__':
+    main()
