@@ -405,7 +405,7 @@ if __name__ == '__main__':
 """
 
 # Loops to process files
-
+"""
 # Program 6-8 and 6-9, page 321-324
 
 # Step 1, enter data by asking user how many data entries to process
@@ -434,3 +434,11 @@ def main():
         amount = float(line)
         print(f'The sales amount for day # {count} is ${amount:.2f} \n')
         line = sales_file.readline()
+
+    sales_file.close()
+
+if __name__ == '__main__':
+    main()
+"""
+
+
