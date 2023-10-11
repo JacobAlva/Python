@@ -404,3 +404,19 @@ if __name__ == '__main__':
     main()
 """
 
+# Loops to process files
+"""
+# Program 6-8 and 6-9, page 321-324
+
+# Step 1, enter data by asking user how many data entries to process
+# Step 2, read the data
+
+def main():
+    num_days = int(input("How many records do you want to process: "))
+
+    #### Writing to file ####
+    sales_file = open('sales.txt', 'w')
+
+    for count in range(1, num_days + 1):
+        sales = float(input(f'Enter the sales for day # {count}: '))
+        sales_file.write(f'{sales}\n')
