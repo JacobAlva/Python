@@ -365,7 +365,7 @@ main()
 ### CHAPTER 6 - FILES AND EXCEPTIONS ###
 
 # File operations - write, read, append
-
+"""
 def main():
     # open file for writing
     infile = open('philosopher.txt', 'w')
@@ -386,5 +386,21 @@ def main():
     line2 = infile.readline()
     line3 = infile.readline()
 
-    
+    # close file after you are done reading
+    infile.close()
+
+    # append to philosopher
+    note = open('philosopher.txt', 'a')
+    note.write('It worked \n')
+    note.close()
+
+
+    # print
+    print(line1)
+    print(line2)
+    print(line3)
+
+if __name__ == '__main__':
+    main()
+"""
 
