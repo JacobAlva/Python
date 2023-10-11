@@ -405,7 +405,7 @@ if __name__ == '__main__':
 """
 
 # Loops to process files
-"""
+
 # Program 6-8 and 6-9, page 321-324
 
 # Step 1, enter data by asking user how many data entries to process
@@ -420,3 +420,17 @@ def main():
     for count in range(1, num_days + 1):
         sales = float(input(f'Enter the sales for day # {count}: '))
         sales_file.write(f'{sales}\n')
+
+    sales_file.close()
+
+    #### Reading & Printing from the file ####
+    sales_file = open('sales.txt', 'r')
+
+    count = 0
+    line = sales_file.readline()
+
+    while line != '':
+        count += 1
+        amount = float(line)
+        print(f'The sales amount for day # {count} is ${amount:.2f} \n')
+        line = sales_file.readline()
