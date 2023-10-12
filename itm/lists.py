@@ -1,7 +1,7 @@
 # Lists are ordered, mutable data structures that allow duplicate element
 
 myList = ["ball", "cherry", "comb"]
-print(myList2)
+print(myList)
 
 """
 # Lists can contain elements of different data types
@@ -35,6 +35,18 @@ myList.append("lemon") #append/add item to the end of the list
 print(myList)
 """
 
-# to insert item at specific location
+# to insert item at specific index
 myList.insert(1, "berry") # 1 here is the index position
 print(myList)
+
+# to remove items
+print(myList.pop(1)) # "pop" returns the indexed item and removes it (helps you to see what you are removing)
+print(myList)
+
+myList.remove("ball") # takes in a string and removes the item. NOT by INDEX
+print(myList)
+
+# remove all elements and empty list
+myList.claer() 
+myList.reverse() # reverses the order of the list
+myList.sort() # sorts the list in ascending order and in-place (replaces existing list)
