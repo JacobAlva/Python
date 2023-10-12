@@ -3,11 +3,12 @@
 myList = ["ball", "cherry", "comb"]
 print(myList)
 
-"""
+
 # Lists can contain elements of different data types
 myList2 = [5, True, 45.3, "Bread"]
-print(myList2)
+#print(myList2)
 
+"""
 # to ndexe items in the list
 item = myList[0] # where zero is the first and the last is n-1
 #print(item)
@@ -47,6 +48,15 @@ myList.remove("ball") # takes in a string and removes the item. NOT by INDEX
 print(myList)
 
 # remove all elements and empty list
-myList.claer() 
-myList.reverse() # reverses the order of the list
-myList.sort() # sorts the list in ascending order and in-place (replaces existing list)
+myList2.clear() 
+myList.reverse()    # reverses the order of the list
+myList.sort()   # sorts the list in ascending order and in-place (replaces existing list)
+
+# to sort and not modify the list, use "sorted"
+list1 = [1,2,6,-4,3,0]
+new_list = sorted(list1)
+new_listrev = sorted(list1, reverse=True)   # to sort in reverse order
+print(list1)
+print(new_list)
+print(new_listrev)
+
