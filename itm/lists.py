@@ -59,7 +59,6 @@ new_listrev = sorted(list1, reverse=True)   # to sort in reverse order
 print(list1)
 print(new_list)
 print(new_listrev)
-"""
 
 #create new list with similar items
 lista = [0] * 3
@@ -80,4 +79,30 @@ print(listc[:]) # returns original list as it slices from begining to the end
 # double colon introduces the step index.
 print(listc[2:6:2]) # selects every second item between index 2 and 6
 print(listc[::-1]) # a cool way to reverse your list.
+"""
 
+# Copying list
+# While copying list, be careful not to marely assign as both lists will
+# reference the same location in memory and any change to one will affect the other.
+
+list5 = [1,2,4,5]
+list6 = list5
+list6.append("apple")
+print(list5)
+print(list6)
+
+# to avoid this, use any of the following methods (.copy, list, or slicing "[:]")
+list7 = list5.copy()  #.copy
+list5.insert(2,"goat")
+print(list5)
+print(list7)
+
+list8 = list(list5) # using list function
+list8.append(3)
+print(list5)
+print(list8)
+
+list9 = list5[:] # slicing from begining to the end. See line 77
+list9.append('bread')
+print(list5)
+print(list9)
