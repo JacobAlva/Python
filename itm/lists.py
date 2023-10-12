@@ -34,7 +34,7 @@ print(len(myList)) #returns the length of the list
 
 myList.append("lemon") #append/add item to the end of the list
 print(myList)
-"""
+
 
 # to insert item at specific index
 myList.insert(1, "berry") # 1 here is the index position
@@ -59,4 +59,13 @@ new_listrev = sorted(list1, reverse=True)   # to sort in reverse order
 print(list1)
 print(new_list)
 print(new_listrev)
+"""
 
+#create new list with similar items
+lista = [0] * 3
+print(lista)
+
+# concatenate lists
+listb = [1, 2, 3]
+listc = lista + listb 
+print(listc)
