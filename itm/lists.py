@@ -79,7 +79,6 @@ print(listc[:]) # returns original list as it slices from begining to the end
 # double colon introduces the step index.
 print(listc[2:6:2]) # selects every second item between index 2 and 6
 print(listc[::-1]) # a cool way to reverse your list.
-"""
 
 # Copying list
 # While copying list, be careful not to marely assign as both lists will
@@ -91,18 +90,35 @@ list6.append("apple")
 print(list5)
 print(list6)
 
-# to avoid this, use any of the following methods (.copy, list, or slicing "[:]")
-list7 = list5.copy()  #.copy
+# to avoid this, use any of the following methods (.copy, list, or slicing "[:]", for loop)
+list7 = list5.copy()    #.copy
 list5.insert(2,"goat")
 print(list5)
 print(list7)
 
-list8 = list(list5) # using list function
+list8 = list(list5)     # using list function
 list8.append(3)
 print(list5)
 print(list8)
 
-list9 = list5[:] # slicing from begining to the end. See line 77
+list9 = list5[:]        # slicing from begining to the end. See line 77
 list9.append('bread')
 print(list5)
 print(list9)
+
+listX = [i for i in list5]  # for loop
+list5.append("butter")
+print(list5)
+print(list9)
+"""
+
+#list comprehension - fast way to create a new list from an existing one
+list10 = [1,2,3,4,5,6]
+list11 = [i for i in list10]    # returns a copy of the list
+list10.append(23)
+print(list10)
+print(list11)
+
+# like any for loop, you can manipulate the value of i depending on what you want in the list
+list12 = [i*i for i in list10]  # returns a square of every item in the list
+print(list12)
