@@ -4,7 +4,6 @@
 # Compound Interest #CH2 Q14
 """ 
 # Chapter 2, Question # 14, p. 116, Compound Interest
-# ICS 698
 
 # Pseudocode
 # Ask the user to enter the initial capital
@@ -32,10 +31,7 @@ print(f'Your compound interest on ${principal:.2f} after {period:.0f} years at a
 
 # BMI Calculator CH3 Q14
 """
-# Jacob Alebiosu
 # Chapter 3, Question # 14, p. 163, Body Mass Index
-# ICS 698
-# SU-2023
 
 # Pseudocode
 # Ask the user to enter their weight and convert from "string" to "float"
@@ -69,10 +65,7 @@ else:
 
 # Temp converter #CH4 Q6
 """
-# Jacob Alebiosu
 # Chapter 4, Question # 6, p. 214 Celsius to Fahrenheit
-# ICS 698
-# SU-2023
 
 # Pseudocode
 # Assign the value 32 to variable k
@@ -100,10 +93,7 @@ for i in range(21):
 
 # Tuition increase #CH4 Q10
 """
-# Jacob Alebiosu
 # Chapter 4, Question # 10, p. 215, Tuition Increase
-# ICS 698
-# SU-2023
 
 # Pseudocode
 # Assign 8000 to "tuition" variable as the initial tuition value
@@ -129,10 +119,7 @@ for year in range(1, 6):
 
 # Test Average and Grade CH5Q15
 """
-# Jacob Alebiosu
 # Chapter 5, Question # 15, p. 297, Test Average and Grade
-# ICS 698
-# SU-2023
 
 # Pseudocode
 # define the calc_average function to find the average of grades using the formula average = (a + b + c + d + e)/5
@@ -214,10 +201,7 @@ if __name__ =='__main__':
 
 # Odd/Even Counter #CH5Q16
 """
-# Jacob Alebiosu
 # Chapter 5, Question # 297, p. 297, Odd/Even Counter
-# ICS 698
-# SU-2023
 
 # Pseudocode
 # import the random module
@@ -275,8 +259,6 @@ if __name__ == '__main__':
 # Future Value #CH5Q19
 """
 #Chapter 5, Question # 19, p. 298, Future Value
-# ICS 698
-# SU-2023
 
 # Pseudocode
 # Define the future_value function to calculate and return the future value using the formula (a * ((1 + b) ** c))
@@ -343,6 +325,5 @@ def main():
 if __name__ == '__main__':
     main()
 """
-
 
 
