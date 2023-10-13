@@ -358,3 +358,29 @@ def write_to_file():
 
     # close the file
     golf_file.close()
+
+def read_from_file():
+    try:
+        # open the file to for reading
+        golf_file = open('golf.txt', 'r')
+
+        # assign first line to display
+        display = golf_file.readline()
+
+        # print each line till the end of the file
+        while display != '':
+            print(f'{display}')
+            # read next line
+            display = golf_file.readline()
+
+        # close file
+        golf_file.close()
+
+    except IOError:
+        print('An error occured trying to read the file.')
+
+    except ValueError:
+        print('An error occured trying to process the file data.')
+
+    except:
+        print('An error occured.')
