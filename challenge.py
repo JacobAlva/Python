@@ -328,7 +328,7 @@ if __name__ == '__main__':
 
 
 # Golf Scores #CH6Q10
-
+"""
 # Chapter 6, Question # 10, p. 359, Golf Scores
 
 # main function
@@ -384,3 +384,10 @@ def read_from_file():
 
     except:
         print('An error occured.')
+
+# call the function
+if __name__ == '__main__':
+    main()
+"""
+
+
