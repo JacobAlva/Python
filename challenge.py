@@ -327,3 +327,34 @@ if __name__ == '__main__':
 """
 
 
+# Golf Scores #CH6Q10
+
+# Chapter 6, Question # 10, p. 359, Golf Scores
+
+# main function
+def main():
+    write_to_file()
+    #read_from_file()
+
+
+def write_to_file():
+    # get the number of players in the team
+    num_players = int(input("How many players are in your team: "))
+
+    # open new file with name 'golf.txt'
+    golf_file = open('golf.txt', 'w')
+
+    # write the first line as header
+    golf_file.write('\n===============\nPLAYER NAME\t\tPLAYER SCORE\n')
+
+    # get the name and score of each player and write it to file
+    for count in range (1, num_players + 1):
+        # get the name and score
+        player_name = input(f"Enter the name of player #{count}: ")
+        player_score = float(input(f"Enter the score of player #{count}:"))
+
+        # write name and score to file
+        golf_file.write(f'{player_name}\t\t\t{player_score}\n')
+
+    # close the file
+    golf_file.close()
