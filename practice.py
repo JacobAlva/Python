@@ -442,3 +442,20 @@ if __name__ == '__main__':
 """
 
 
+# Try/Except with for loop
+"""
+def main():
+    for x in range (3):
+        num1 = int(input('Please enter the first number: '))
+        num2 = int(input('Please enter the second number: '))
+
+        try:
+            result = num1 / num2
+            print(f'{num1} / {num2} = {result:.2f}')
+        except:
+            print('You cannot divide by 0')
+
+if __name__ == '__main__':
+    main()
+"""
+
