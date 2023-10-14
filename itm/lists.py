@@ -1,6 +1,6 @@
 # Lists are ordered, mutable data structures that allow duplicate element
 
-myList = ["ball", "cherry", "comb"]
+myList = ["ball", "cherry", "ball", "comb"]
 print(myList)
 
 
