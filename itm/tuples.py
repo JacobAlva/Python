@@ -11,4 +11,4 @@ print(type(tuple1))
 tuple2 = "Max",
 print(type(tuple2)) 
 
-
+#
