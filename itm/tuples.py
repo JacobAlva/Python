@@ -1,6 +1,7 @@
 # Tuples: ordered, immutable data structures, allow duplicate elements
 
-mytuple = ("Max", 28, "Bread") #this is a tuple
+#this is a tuple
+mytuple = ("Max", 28, "Bread") 
 print(type(mytuple))
 
 #this is a string
@@ -22,3 +23,13 @@ print(list1)
 # to pick the last element in the tuple
 item = tuple3[-1]
 print(item)
+
+# iterate over tuple
+for i in tuple3:
+    print(i)
+
+# check if element is in tuple
+if "ball" in tuple3:
+    print("Yes")
+else:
+    print("No")
