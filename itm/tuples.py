@@ -12,5 +12,13 @@ tuple2 = "Max", #the ending comma changes this string to a tuple
 print(type(tuple2)) 
 
 # you can also create a tuple from an iterable such as a list using the tuple() function
-tuple3 = tuple(["may", 45, "Bread"])
+list1 = ["may", 45, "Bread"]
+tuple3 = tuple(list1)
 print(type(tuple3))
+print(type(list1))
+list1.insert(2,"goat",)
+print(list1)
+
+# to pick the last element in the tuple
+item = tuple3[-1]
+print(item)
