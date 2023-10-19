@@ -9,6 +9,7 @@ dict1 = {"name": "Jane", "age": 28, "city": "Maine"}
 # to use quotes for your key.
 
 dict2 = dict(name="Suner", age = 28, city = "Rhodes") 
+
 """
 print(dict2) 
 print(type(dict2))
@@ -50,7 +51,6 @@ try:
     print(dict2["name"])
 except:
     print("Error") # returns an error is the key isn't found
-"""
 
 # iterate over a dict and return all the values 
 for key in dict1:
@@ -67,3 +67,36 @@ for val in dict2.values():
 # for both keys and values
 for key, val in dict1.items():
     print(key,":", val)
+"""
+# to copy a dictionary
+# Similar to a list, copying a dictionary directly references a pointer.
+# Thus, modifying the copy modifies the original list
+dict1_cpy = dict1
+print(dict1)
+print(dict1_cpy)
+
+dict1_cpy["email"] = "ja@cyb.com"
+print(dict1)
+print(dict1_cpy)
+
+# to avoid this, use either the .copy() function, dict(...) or for loop
+
+# using copy
+dict3 = dict1.copy()
+dict3["tel"] = "453-782"
+print(dict3)
+print(dict1)
+
+# you can also use the dict function
+dict4 = dict(dict2)
+dict4["tel"] = "453-782"
+print(dict4)
+print(dict2)
+
+# using a for loop to create a new dictionary
+    # dict5 = {(key, val) for key, val in dict2.items()} # returned a SET
+dict5 = {key:val for key, val in dict2.items()}
+dict5["zip"] = "47208"
+print(dict5)
+print(dict2)
+print(type(dict5))
