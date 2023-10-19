@@ -112,9 +112,9 @@ print(list5)
 print(list9)
 
 listX = [i for i in list5]  # for loop
-list5.append("butter")
+list.append("butter")
 print(list5)
-print(list9)
+print(listX)
 """
 
 #list comprehension - fast way to create a new list from an existing one
