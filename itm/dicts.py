@@ -41,4 +41,14 @@ print(dict2)
 print(dict2.popitem()) 
 """
 
+# to check if a key is in a dict
+# you can use an if/else statement 
+if "name" in dict1:
+    print(dict1["name"])
+
+# or use a try/except statement
+try:
+    print(dict2["name"])
+except:
+    print("Error") # returns an error is the key isn't found
 
