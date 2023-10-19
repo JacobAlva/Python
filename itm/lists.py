@@ -32,10 +32,14 @@ else:
 
 print(len(myList)) #returns the length of the list
 
-
-myList.append("lemon") #append/add item to the end of the list
+#append/add item to the end of the list
+myList.append("lemon") 
 print(myList)
 
+listx = []
+listx.append("('apple', 'clas')")
+listx.append((2, False, 14))
+print(listx)
 
 # to insert item at specific index
 myList.insert(1, "berry") # 1 here is the index position
