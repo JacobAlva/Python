@@ -67,7 +67,7 @@ for val in dict2.values():
 # for both keys and values
 for key, val in dict1.items():
     print(key,":", val)
-"""
+
 # to copy a dictionary
 # Similar to a list, copying a dictionary directly references a pointer.
 # Thus, modifying the copy modifies the original list
@@ -100,3 +100,12 @@ dict5["zip"] = "47208"
 print(dict5)
 print(dict2)
 print(type(dict5))
+"""
+
+# to merge two dictionaries
+dict6 = {"name": "Jane", "last": "Aluke", "age": 28, "city": "Maine", "zip": "47832"}
+dict7 = dict(name="Suner", age = 28, tel = "340-291-87") 
+
+# to merge, it updates all values with a matching key and adds new key:value pairs
+dict7.update(dict6)
+print(dict7)
