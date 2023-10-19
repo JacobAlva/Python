@@ -37,8 +37,6 @@ if "ball" in tuple3:
 else:
     print("No")
 
-"""
-
 # get tuple length
 tuple4 = ('a', 'p', 'papaya', 'l', 'e', 'l', 3, 0)
 print(len(tuple4))
@@ -52,3 +50,17 @@ print(tuple4.index('p'))
 # tuple slicing
 tuple5 = tuple4[2:5:2] # see "list" for details on step index
 print(tuple5)
+"""
+
+# unpacking a tuple
+# while unpacking, the number of external elements must match 
+# the number of elements in the tuple
+tuple6 = "John", 32, "Muncie"
+name, age, city = tuple6
+print(name,"\n",age,"\n",city)
+
+# unpack multiple elements with a star (*)
+tuple7 = (1, 2, 4, 5, 6, 9)
+a, *b, c, d = tuple7 # the star operator collects multiple values and stores them in list "b"
+print(a,"\n",b,"\n",c,"\n",d)
+
