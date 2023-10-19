@@ -16,8 +16,10 @@ print(type(tuple2))
 # you can also create a tuple from an iterable such as a list using the tuple() function
 list1 = ["may", 45, "Bread"]
 tuple3 = tuple(list1)
+list2 = list(tuple3) # convert a tuple back to a list
 print(type(tuple3))
 print(type(list1))
+print(type(list2))
 list1.insert(2,"goat",)
 print(list1)
 
@@ -38,11 +40,15 @@ else:
 """
 
 # get tuple length
-tuple4 = ('a', 'p', 'papaya', 'l', 'e', 'l')
+tuple4 = ('a', 'p', 'papaya', 'l', 'e', 'l', 3, 0)
 print(len(tuple4))
 
 # get number of occurence of an element
 print(tuple4.count('p'))
 
 # first index of an element
-print(tuple4.index('l'))
+print(tuple4.index('p'))
+
+# tuple slicing
+tuple5 = tuple4[2:5:2] # see "list" for details on step index
+print(tuple5)
