@@ -1,5 +1,6 @@
 # Tuples: ordered, immutable data structures, allow duplicate elements
 
+"""
 #this is a tuple
 mytuple = ("Max", 28, "Bread") 
 print(type(mytuple))
@@ -33,3 +34,15 @@ if "ball" in tuple3:
     print("Yes")
 else:
     print("No")
+
+"""
+
+# get tuple length
+tuple4 = ('a', 'p', 'papaya', 'l', 'e', 'l')
+print(len(tuple4))
+
+# get number of occurence of an element
+print(tuple4.count('p'))
+
+# first index of an element
+print(tuple4.index('l'))
