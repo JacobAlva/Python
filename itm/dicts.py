@@ -39,7 +39,6 @@ print(dict2)
 # but since Python3, it pops the last added entry
 # to remove a specific key item, use "pop"
 print(dict2.popitem()) 
-"""
 
 # to check if a key is in a dict
 # you can use an if/else statement 
@@ -51,4 +50,20 @@ try:
     print(dict2["name"])
 except:
     print("Error") # returns an error is the key isn't found
+"""
 
+# iterate over a dict and return all the values 
+for key in dict1:
+    print(key)
+
+# returns all the keys also
+for keys in dict2.keys():
+    print(keys)
+
+# to return all values
+for val in dict2.values():
+    print(val)
+
+# for both keys and values
+for key, val in dict1.items():
+    print(key,":", val)
