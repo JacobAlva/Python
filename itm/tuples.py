@@ -50,7 +50,6 @@ print(tuple4.index('p'))
 # tuple slicing
 tuple5 = tuple4[2:5:2] # see "list" for details on step index
 print(tuple5)
-"""
 
 # unpacking a tuple
 # while unpacking, the number of external elements must match 
@@ -63,6 +62,7 @@ print(name,"\n",age,"\n",city)
 tuple7 = (1, 2, 4, 5, 6, 9)
 a, *b, c, d = tuple7 # the star operator collects multiple values and stores them in list "b"
 print(a,"\n",b,"\n",c,"\n",d)
+"""
 
 # compare the size of tuple and list in "bytes"
 import sys
