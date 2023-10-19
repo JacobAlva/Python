@@ -64,3 +64,10 @@ tuple7 = (1, 2, 4, 5, 6, 9)
 a, *b, c, d = tuple7 # the star operator collects multiple values and stores them in list "b"
 print(a,"\n",b,"\n",c,"\n",d)
 
+# compare the size of tuple and list in "bytes"
+import sys
+tuple8 = ("what", "is", "your", "name?", 373, "watermelon")
+list3 = ["what", "is", "your", "name?", 373, "watermelon"]
+print(sys.getsizeof(tuple8), "bytes")
+print(sys.getsizeof(list3), "bytes")
+# the results show that a tuple is more memory efficient
