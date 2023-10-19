@@ -1,4 +1,4 @@
-# Dictionary: key-value paris, unordered, mutable
+# Dictionary: key-value pairs, unordered, mutable
 
 # A dictionary is created with braces with each value pair separated by a comma ,
 dict1 = {"name": "Jane", "age": 28, "city": "Maine"}
@@ -112,12 +112,12 @@ print(dict7)
 
 # Key types - you can use an integer as key
 #dict8 = dict(9 = 2, 3 = 4, 5=6, 7=8) | this didn't work because...
-"""
+'''
     In Python, when creating a dictionary using the dict() constructor,
     you need to use valid identifiers (variable names) as keys, not 
     numeric literals. The keys in a dictionary should be strings, 
     variables, or other hashable data types.
-"""
+'''
 # correct way to create a dict with numeric literals
 dict9 = {1:2, 3:4, 5:6, 7:8}
 print(dict9)
@@ -125,3 +125,12 @@ print(dict9)
 # to reference a value in this dict
 print(dict9[7]) # this is different from indexing like in a list
 
+# using a tuple as dictioinary key
+tuple1 = (2, "six")
+list1 = [3,5]
+dict10 = {tuple1:12, "box":tuple1}
+dict11 = {"goat":list1} # returns an error
+print(dict10)
+print(dict11)
+ # NOTe: You can't use a list as a dict key because it is mutable and thus unhashable type
+ # Almost anything can be saved as a dictionary value
