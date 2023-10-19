@@ -15,7 +15,7 @@ print(dict2)
 print(type(dict2))
 
 # to access the values in a dictionary
-# referencing a key not in the dic returns a KeyError
+    # NOTe: referencing a key not in the dic returns a KeyError
 value = dict1["age"]
 print(value)
 
@@ -109,3 +109,19 @@ dict7 = dict(name="Suner", age = 28, tel = "340-291-87")
 # to merge, it updates all values with a matching key and adds new key:value pairs
 dict7.update(dict6)
 print(dict7)
+
+# Key types - you can use an integer as key
+#dict8 = dict(9 = 2, 3 = 4, 5=6, 7=8) | this didn't work because...
+"""
+    In Python, when creating a dictionary using the dict() constructor,
+    you need to use valid identifiers (variable names) as keys, not 
+    numeric literals. The keys in a dictionary should be strings, 
+    variables, or other hashable data types.
+"""
+# correct way to create a dict with numeric literals
+dict9 = {1:2, 3:4, 5:6, 7:8}
+print(dict9)
+
+# to reference a value in this dict
+print(dict9[7]) # this is different from indexing like in a list
+
