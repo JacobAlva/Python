@@ -2,6 +2,7 @@
 
 """
 #this is a tuple
+# a tuple is created with an optional round brackets, with elements separated by comma
 mytuple = ("Max", 28, "Bread") 
 print(type(mytuple))
 
