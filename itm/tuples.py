@@ -71,3 +71,10 @@ list3 = ["what", "is", "your", "name?", 373, "watermelon"]
 print(sys.getsizeof(tuple8), "bytes")
 print(sys.getsizeof(list3), "bytes")
 # the results show that a tuple is more memory efficient
+
+#compare speed of tuple vs list
+import timeit
+print(timeit.timeit(stmt="(0, 1, 2, 3, 4, 5)", number=1000000))
+print(timeit.timeit(stmt="[0, 1, 2, 3, 4, 5]", number=1000000))
+# the results show the tuple is almost 10x faster than the list
+# Thus, working with tuples can be more efficient that working with lists.
