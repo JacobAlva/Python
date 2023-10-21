@@ -4,6 +4,8 @@
 myList = ["ball", "cherry", "ball", "comb"]
 print(myList)
 
+list1a = list("123441")
+print(list1a)
 
 # Lists can contain elements of different data types
 myList2 = [5, True, 45.3, "Bread"]
