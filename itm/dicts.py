@@ -1,6 +1,6 @@
 # Dictionary: key-value pairs, unordered, mutable
 
-# A dictionary is created with braces with each value pair separated by a comma ,
+# A dictionary is created with curly braces with each value pair separated by a comma ,
 dict1 = {"name": "Jane", "age": 28, "city": "Maine"}
 #print(type(dict1))
 #print(dict1)
