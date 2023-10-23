@@ -31,7 +31,6 @@ print(set4.pop())   # removes an arbitrary element from the set and removes it
 
 set4.clear()        # empties the set
 print(set4)     
-"""
 
 # iterate over each
 set5 = {5,1,3,4,2,2,3}
@@ -41,3 +40,9 @@ for i in set5:
 # check if element exits
 if 1 in set5:
     print("Yes")
+"""
+
+# set operations
+odds = {1, 3, 5, 7, 9}
+evens = {0, 2, 4, 6, 8}
+primes = {2, 3, 5, 7}
