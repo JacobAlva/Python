@@ -12,7 +12,7 @@ set2 = set("Hello")
 myList = ["ball", "cherry", "ball", "comb"]
 set3 = set(myList)
 print(set3)
-"""
+
 # to create an empty set    
 # set4 = {}         # You can't use this because it is read as a dictionary
 set4 = set()
@@ -27,9 +27,17 @@ print(set4)         # removing an inexistent element returns a "KeyError"
 set4.discard(9)     # removes an element and does nothing if not a member
 print(set4)
 
-print(set4.pop())   # removes an arbitrary element from the set.
+print(set4.pop())   # removes an arbitrary element from the set and removes it
 
 set4.clear()        # empties the set
 print(set4)     
+"""
 
+# iterate over each
+set5 = {5,1,3,4,2,2,3}
+for i in set5:
+    print(i)
 
+# check if element exits
+if 1 in set5:
+    print("Yes")
