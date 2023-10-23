@@ -44,5 +44,12 @@ if 1 in set5:
 
 # set operations
 odds = {1, 3, 5, 7, 9}
-evens = {0, 2, 4, 6, 8}
+evens = {0, 2, 4, 6, 8, "g"}
 primes = {2, 3, 5, 7}
+print(type(evens))
+print(odds.union(primes))                # union
+print(evens.intersection(primes))       # intersection
+print(primes.difference(odds))          # in A (primes) but not in B (odds) in that order
+print(odds.difference(primes))          # same operation in a different order retunrs a different result
+print(odds.symmetric_difference(primes))    # returns the difference of both sets. Result is same irrespective of order
+print(primes.symmetric_difference(odds))    # output is same in both 
