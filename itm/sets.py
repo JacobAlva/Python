@@ -40,7 +40,6 @@ for i in set5:
 # check if element exits
 if 1 in set5:
     print("Yes")
-"""
 
 # set operations
 odds = {1, 3, 5, 7, 9}
@@ -53,3 +52,20 @@ print(primes.difference(odds))          # in A (primes) but not in B (odds) in t
 print(odds.difference(primes))          # same operation in a different order retunrs a different result
 print(odds.symmetric_difference(primes))    # returns the difference of both sets. Result is same irrespective of order
 print(primes.symmetric_difference(odds))    # output is same in both 
+"""
+# previous operations above don't modify the set, they rather create a new set with the output
+# to modify the set in place
+
+set5 = {1, 3, 5, 7, 9}
+set6 = {1, 3, 5, 0, 2, 6, 8, "g"}
+set7 = {3, 4, 9, 0}
+print(set5)
+set5.update(set6)       # updates set5 as the union of both sets
+print(set5)
+
+set6.intersection_update(set7)  # updates set6 with the intersection of both sets
+print(set6)
+
+print(set7)
+set7.difference_update(set5)    # removes all element of set5 from set7
+print(set7) 
