@@ -52,7 +52,8 @@ print(primes.difference(odds))          # in A (primes) but not in B (odds) in t
 print(odds.difference(primes))          # same operation in a different order retunrs a different result
 print(odds.symmetric_difference(primes))    # returns the difference of both sets. Result is same irrespective of order
 print(primes.symmetric_difference(odds))    # output is same in both 
-"""
+
+
 # previous operations above don't modify the set, they rather create a new set with the output
 # to modify the set in place
 
@@ -74,3 +75,14 @@ print(set6)
 set8 = {1, 0, 4, 7, 89}
 set8.symmetric_difference_update(set6)  # symmetric difference update 
 print(set8)
+"""
+
+set9 = {1, 2, 3, 4, 5}
+set10 = {1, 2, 3}
+
+print(set9.issubset(set10))     # returns a boolean if A is subset of B or not
+print(set10.issubset(set9))
+print(set9.issuperset(set10))   # is superset
+print(set10.issuperset(set9))
+print(set9.isdisjoint(set10))   # Return True if two sets have a null intersection.
+
