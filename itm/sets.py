@@ -75,8 +75,8 @@ print(set6)
 set8 = {1, 0, 4, 7, 89}
 set8.symmetric_difference_update(set6)  # symmetric difference update 
 print(set8)
-"""
 
+# set booleans
 set9 = {1, 2, 3, 4, 5}
 set10 = {1, 2, 3}
 
@@ -85,4 +85,20 @@ print(set10.issubset(set9))
 print(set9.issuperset(set10))   # is superset
 print(set10.issuperset(set9))
 print(set9.isdisjoint(set10))   # Return True if two sets have a null intersection.
+"""
+# copying sets
+# just like in other data structions, direct copy points both sets to the same memory location
+set11 = {3, 6, 8}
+set12 = set11
+set12.add(2)
+print(set11)
+print(set12)
 
+# preferred methods
+set13 = set11.copy()
+set14 = set(set12)
+set13.add(5)
+set14.remove(8)
+print(set13)
+print(set14)
+print(set12)
