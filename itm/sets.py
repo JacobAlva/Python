@@ -85,7 +85,7 @@ print(set10.issubset(set9))
 print(set9.issuperset(set10))   # is superset
 print(set10.issuperset(set9))
 print(set9.isdisjoint(set10))   # Return True if two sets have a null intersection.
-"""
+
 # copying sets
 # just like in other data structions, direct copy points both sets to the same memory location
 set11 = {3, 6, 8}
@@ -102,3 +102,18 @@ set14.remove(8)
 print(set13)
 print(set14)
 print(set12)
+"""
+
+# frozen sets
+# to create an immutable set, use frozen sets
+set15 = set([1,2,3,4,5])    # passing a list to a set
+
+print(type(set15))
+set15.add(7)
+print(set15)
+
+set16 = frozenset([3,4,5])
+print(type(set16))
+print(set16)
+# set16.add(8)    # AttributeError
+# any operation that modifies the original set returns an AttributeError
