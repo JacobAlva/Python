@@ -69,3 +69,8 @@ print(set6)
 print(set7)
 set7.difference_update(set5)    # removes all element of set5 from set7
 print(set7) 
+
+print(set6)
+set8 = {1, 0, 4, 7, 89}
+set8.symmetric_difference_update(set6)  # symmetric difference update 
+print(set8)
