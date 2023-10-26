@@ -27,6 +27,12 @@ print(string3[-1])  # last character
 string3[0] = "h"    # this operation cannot work because a string is immutable
 """
 # string slicing - to access a substring
-string4 = "welcome"
+string4 = "Welcome"
 print(string4[1:6:2])     # e-m with step NOTE: index 6 "e" is excluded
 print(string4[::-1 ])     # reverses the string
+
+# string concat
+string5 = "Home"
+print(string4 + " " + string5)
+
+
