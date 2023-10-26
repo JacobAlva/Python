@@ -35,4 +35,7 @@ print(string4[::-1 ])     # reverses the string
 string5 = "Home"
 print(string4 + " " + string5)
 
+# iterate over string with for loop
+for i in string5:
+    print(i)
 
