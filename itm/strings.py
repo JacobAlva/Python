@@ -37,5 +37,12 @@ print(string4 + " " + string5)
 
 # iterate over string with for loop
 for i in string5:
-    print(i)
+    #print(i)
+    pass
+
+# check for character
+if "Hom" in string5:
+    print("Yes")
+else:
+    print("No")
 
