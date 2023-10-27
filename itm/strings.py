@@ -25,7 +25,7 @@ print(string3[-1])  # last character
 
 # string assignment
 string3[0] = "h"    # this operation cannot work because a string is immutable
-"""
+
 # string slicing - to access a substring
 string4 = "Welcome"
 print(string4[1:6:2])     # e-m with step NOTE: index 6 "e" is excluded
@@ -45,4 +45,14 @@ if "Hom" in string5:
     print("Yes")
 else:
     print("No")
+"""
+# strip white spaces
+string6 = "   Hello World   "
+print(string6)
+string6.strip()     # this doesn't change the string in-place 
+# i.e. update the original string, because a string is immutable
+print(string6)
+# to update the string, it has to be assigned
+string6 = string6.strip()
+print(string6)
 
