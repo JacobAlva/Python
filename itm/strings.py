@@ -56,3 +56,15 @@ print(string6)
 string6 = string6.strip()
 print(string6)
 
+# coverting cases
+print(string6.upper())
+print(string6.lower())
+print(string6.lower())
+print(string6.startswith("H"))
+
+
+
+
+
+
+
