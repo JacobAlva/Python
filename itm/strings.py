@@ -45,7 +45,7 @@ if "Hom" in string5:
     print("Yes")
 else:
     print("No")
-"""
+
 # strip white spaces
 string6 = "   Hello World   "
 print(string6)
@@ -74,7 +74,9 @@ print(string6.count("o"))   # count of word/xter
 # replace word/character in a string 
 # this doesn't modify the string as it is immutable
 # it creates a new string instead
-print(string6.replace("Hel", "You"))    
-
+print(string6.replace("Hel", "You"))   
+# returns original string, if given string is not found
+print(string6.replace("dog", "Yel"))
+"""
 
 
