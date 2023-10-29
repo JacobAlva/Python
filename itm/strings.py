@@ -79,4 +79,11 @@ print(string6.replace("Hel", "You"))
 print(string6.replace("dog", "Yel"))
 """
 
+# lists and strings
+string7 = "How are you doing?"
+list1 = string7.split()     # default delimiter is a space "", any xter can be used
+print(list1)
 
+# convert list back to string
+string8 = ", ".join(list1)    # concatenates the list, separated by the string value
+print(string8)
