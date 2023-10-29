@@ -1,4 +1,4 @@
-# Tuples: ordered, immutable data structures, allow duplicate elements
+# Tuples: ordered, immutable, iterable, data structures, allow duplicate elements
 
 """
 #this is a tuple

@@ -1,4 +1,4 @@
-# Lists are ordered, mutable data structures that allow duplicate element
+# Lists are ordered, mutable, iterable data structures that allow duplicate element
 
 # lists are created with square brackets and elements separated by comma
 myList = ["ball", "cherry", "ball", "comb"]
