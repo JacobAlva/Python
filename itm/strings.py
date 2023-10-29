@@ -61,10 +61,20 @@ print(string6.upper())
 print(string6.lower())
 print(string6.lower())
 print(string6.startswith("H"))
+print(string6.endswith("Hel"))
 
+# to find a character/world
+# returns the index of a word/character. 
+# returns -1 if not found
+# this method is case sensitive
+print(string6.find("W"))    
 
+print(string6.count("o"))   # count of word/xter
 
-
+# replace word/character in a string 
+# this doesn't modify the string as it is immutable
+# it creates a new string instead
+print(string6.replace("Hel", "You"))    
 
 
 
