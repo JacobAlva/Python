@@ -86,7 +86,7 @@ print(list1)
 # convert list back to string
 string8 = ", ".join(list1)    # concatenates the list, separated by the string value
 print(string8)
-"""
+
 # Example to show the power of "".join() method
 from timeit import default_timer as timer
 list2 = ["a"] * 1000000
@@ -115,3 +115,25 @@ print(b)
 #print((a-b)/a*100)
 #print((abs(a - b) / ((a + b) / 2)) * 100)
 print(f"Method b is {a/b} times faster than a")
+"""
+
+# formating strings
+# the older methods are % and .format()
+# since Python 3.6, there is the f-Strings
+
+# Using % placeholder
+# The % usese %s,d,f for string, decimal and float respectively
+# The defaulf for floats is 6 decimal places which can be modified e.g. %.3f 
+var = "Terry"           # string
+vart = 3                # int
+varf = 5.4520361849     # float
+print("The variables are %s, %d and %.2f" % (var, vart, varf))   # to use two placeholders
+
+# % is older, a newer method is the format
+print("The variables are {}, {} and {:.4f}".format(var, vart, varf))
+
+# the newest and recommended formating approach is the f-Strings
+print(f"The variables are {var}, {vart} and {varf:.2f}")
+
+# these variables support runtime operations e.g.
+print(f"The variables are {var}, {vart + 4} and {varf * 2:.3f}")
