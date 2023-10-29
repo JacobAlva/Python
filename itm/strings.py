@@ -77,7 +77,6 @@ print(string6.count("o"))   # count of word/xter
 print(string6.replace("Hel", "You"))   
 # returns original string, if given string is not found
 print(string6.replace("dog", "Yel"))
-"""
 
 # lists and strings
 string7 = "How are you doing?"
@@ -87,3 +86,32 @@ print(list1)
 # convert list back to string
 string8 = ", ".join(list1)    # concatenates the list, separated by the string value
 print(string8)
+"""
+# Example to show the power of "".join() method
+from timeit import default_timer as timer
+list2 = ["a"] * 1000000
+#print(list2)
+
+# a poor way to convert list2 to a string
+start = timer()
+string9 = ""
+for i in list2:
+    string9 +=i
+#print(string9)
+stop = timer()
+a = stop - start
+print(a)
+# this method is not efficient becuase it creates a new string9 at every iteration
+# since a string is immutable and cannot be appended to
+
+# a better and faster approach
+start = timer()
+string10 = "".join(list2) 
+#print(string10)
+stop = timer()
+b = stop - start
+print(b)
+#print(f"{(a-b)/a*100:.2f}")
+#print((a-b)/a*100)
+#print((abs(a - b) / ((a + b) / 2)) * 100)
+print(f"Method b is {a/b} times faster than a")
