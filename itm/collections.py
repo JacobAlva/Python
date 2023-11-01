@@ -66,3 +66,38 @@ print(d_dict)
 print(d_dict['d'])
 """
 
+# DEQUE
+''' A deque is a double-ended queue, which is a data structure that allows you to efficiently 
+    add and remove elements from both ends. A deque can be thought of as a combination of a 
+    stack and a queue. 
+'''
+
+from collections import deque
+d = deque()
+d.append(1)
+d.append(2)
+
+d.appendleft(3)     # appends from the left
+print(d)
+
+d.popleft()         # removes from the left
+print(d)
+
+d.extend([2,4,5,6,-2])        # add multiple elements at the same time
+print(d)
+
+d.extendleft([0, -1])
+print(d)
+
+d.rotate(2)         # shift elements to the right by specified places e.g. 2
+print(d)
+d.rotate(-1)        # rotates to the left
+print(d)
+
+print(d.count(2))   # counts the number of occurences of an element
+
+d.reverse()         # reverses order of all elements
+print(d)
+
+d.clear()           # removes all elements
+print(d)
