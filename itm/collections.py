@@ -50,7 +50,7 @@ ordered_dict['c'] = 3
 ordered_dict['d'] = 4
 ordered_dict['a'] = 1
 print(ordered_dict)
-"""
+
 
 # DEFAULT DICTS
 ''' Similar to the regular dictionary except it has a default value if the key has 
@@ -61,6 +61,8 @@ d_dict = defaultdict(int)       # the default value of an int is zero "0". Could
 d_dict['a'] = 1
 d_dict['b'] = 2
 d_dict['c'] = 3
-d_dict['d']     # this would raise a key error with a normal dictionary but works with named_dicts     
+d_dict['d']     # this would raise a key error with a normal dictionary but works with default_dicts     
 print(d_dict)
 print(d_dict['d'])
+"""
+
