@@ -32,3 +32,9 @@ print(list(counter1.elements()))        # a list with all different elements rep
 '''Easy to create light-weight object type similar to a struct'''
 
 from collections import namedtuple
+Point = namedtuple('Point', 'x,y')
+pt = Point(2, -4)
+print(pt)   # print the entire named tuple
+print(pt.x, pt.y)   # access each field
+print(pt.x * 2, pt.y + pt.x)    # perform arithmetic ops on field
+
