@@ -26,7 +26,6 @@ print(counter1.most_common())           # returns all items sorted in desc order
 print(counter1.most_common(2))          # returns a list of the top 2 most common element enclosed in tuples
 print(counter1.most_common(2)[0][0])    # selects the first element (key) of the first tuple in the list which is the value of the most common element in the collection
 print(list(counter1.elements()))        # a list with all different elements repeating as many times as they count
-"""
 
 # NAMED TUPLE
 '''Easy to create light-weight object type similar to a struct'''
@@ -37,4 +36,17 @@ pt = Point(2, -4)
 print(pt)   # print the entire named tuple
 print(pt.x, pt.y)   # access each field
 print(pt.x * 2, pt.y + pt.x)    # perform arithmetic ops on field
+"""
 
+# ORDERED DICT
+''' Regular dictionaries but can remember the order items were inserted
+    The have become less important since Python 3.7 that allows regular 
+    dictionaries to remember order.
+'''
+from collections import OrderedDict
+ordered_dict = OrderedDict() # using a dictionary  (with = {}) provides the same result
+ordered_dict['b'] = 2
+ordered_dict['c'] = 3
+ordered_dict['d'] = 4
+ordered_dict['a'] = 1
+print(ordered_dict)
