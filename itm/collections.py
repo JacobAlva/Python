@@ -83,10 +83,10 @@ print(d)
 d.popleft()         # removes from the left
 print(d)
 
-d.extend([2,4,5,6,-2])        # add multiple elements at the same time
+d.extend([2,4,5,6,-2])        # add multiple elements at the same time with iterable
 print(d)
 
-d.extendleft([0, -1])
+d.extendleft([0, -1])       # extend left 
 print(d)
 
 d.rotate(2)         # shift elements to the right by specified places e.g. 2
@@ -101,3 +101,16 @@ print(d)
 
 d.clear()           # removes all elements
 print(d)
+
+# musings
+# i really don't see the point of deque if the insert() method can allow you to insert 
+# elements at any position of the list and you can convert a deque to a list.  
+
+d.extend([2, 9, 0, 4, "g"])
+print(d)
+print(type(d))
+e = list(d)         # conver deque to list
+print(type(e))
+e.insert(0, "yes")      # insert value at index 0
+e.insert(3, "5")        # insert value at index 3
+print(e)
