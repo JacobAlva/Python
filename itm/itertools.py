@@ -18,5 +18,11 @@ from itertools import permutations
 a = [1,2,3]
 perm = permutations(a)
 print(perm)         # this retunrs an object from the library. Use an iterable (e.g. list to print out the output
-print(list(perm), len(list(perm)))
+# print(list(perm), len(list(perm)))
+
+""" 
+It is important to note that the permutations function returns an iterator, and when you convert it to a list using list(perm), it's exhausted. As a result, when you try to get the length using len(list(perm)), it returns 0 because the iterator has already been consumed. To get the correct length, you should store the permutations in a list before converting them to a list. Here's the corrected code:
+"""
+perm_list = list(perm)
+print(list(perm_list), len(perm_list))
 
