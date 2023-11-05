@@ -15,7 +15,7 @@ print(list(prod))
 
 from itertools import permutations
 # returns all possible orderings of an input
-a = [1,2,3]
+a = [1,2,3,4]
 perm = permutations(a)
 print(perm)         # this retunrs an object from the library. Use an iterable (e.g. list to print out the output
 # print(list(perm), len(list(perm)))
@@ -25,4 +25,9 @@ It is important to note that the permutations function returns an iterator, and 
 """
 perm_list = list(perm)
 print(list(perm_list), len(perm_list))
+
+# to specify the length of the permutations
+perm1 = permutations(a, 2)
+p1L = list(perm1)
+print(p1L, len(p1L))
 
