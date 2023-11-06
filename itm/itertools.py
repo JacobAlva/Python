@@ -34,7 +34,7 @@ print(p1L, len(p1L))
 """
 
 
-from itertools import combinations, combinations_with_replacement
+from itertools import combinations, combinations_with_replacement, permutations
 # returns all possible combinations of an iterable with a specified length
 
 a = range(4, 12, 2)
@@ -44,4 +44,9 @@ print(list(comb))
 
 comb_wr = combinations_with_replacement(a, 2)
 print(list(comb_wr))
+
+# comparing perm, comb & comb_wr
+perm = permutations(a, 2)
+print(list(perm))
+''' Notice the differences between all three. Similar but different'''
 
