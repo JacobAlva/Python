@@ -133,3 +133,12 @@ for i in count(5, 1):   # count(first_val, step[defaut step is 1])
     print(i)
     if (i == 30):       # break loop
         break
+
+acyc = range(1,5)
+x = 0
+for i in cycle(acyc):
+    print(i)
+    x+=1
+    if x > 30:
+        break
+
