@@ -94,3 +94,10 @@ for key, value in group_obj:
     print(key, list(value))     # returns a grouped output of all elements in the list </> 3
 # print(group_obj)
 # print(key, list(value))
+
+# using lambdas
+'''Lambdas are small single-line functions having an input, perform operations & provide an output '''
+# Lambdas can be used to reduce/improve the code above
+group_obj_lam = groupby(a, key = lambda x: x<3)
+for key, values in group_obj:
+    print(key, list(value))
