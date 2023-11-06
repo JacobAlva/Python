@@ -57,13 +57,25 @@ print(list(perm))
 # ACCUMULATE
 ''' The accumulate fxn makes an iterator that returns accumulated sums or any other binary fxn provided as input'''
 
-from itertools import accumulate 
+from itertools import accumulate
+
 a = range(1,5)
 b = [i for i in a]      # comprehension
 #b.insert(0, (1,1))
-c = b[:1] + [1,1] + b[1:]   # splice and concat multiple lists
+c = b[:1] + [1] + b[1:]   # splice and concat multiple lists
 print(c)
 acc = accumulate(c)
 print(list(a))
 print(list(acc))
 print(b)
+
+import operator     # for mathematical operations
+acc2 = accumulate(c, func = operator.mul)       # returns an accumulated multiplication of each element
+print(list(acc2))
+
+d = [1,4,3,5,2]
+acc3 = list(accumulate(d, func=max))      # compares each element and returns the max
+print(d)
+print(acc3)
+print(acc3[-1])     # returns the highest element in the list
+
