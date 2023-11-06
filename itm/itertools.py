@@ -34,7 +34,7 @@ print(p1L, len(p1L))
 """
 
 
-from itertools import combinations
+from itertools import combinations, combinations_with_replacement
 # returns all possible combinations of an iterable with a specified length
 
 a = range(4, 12, 2)
@@ -42,4 +42,6 @@ comb = combinations(a, 2)   # range(start, stop, step). A range is also an itera
 print(a)
 print(list(comb))
 
+comb_wr = combinations_with_replacement(a, 2)
+print(list(comb_wr))
 
