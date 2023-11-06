@@ -51,7 +51,6 @@ print(list(comb_wr))
 perm = permutations(a, 2)
 print(list(perm))
 ''' Notice the differences between all three. Similar but different'''
-"""
 
 
 # ACCUMULATE
@@ -78,4 +77,20 @@ acc3 = list(accumulate(d, func=max))      # compares each element and returns th
 print(d)
 print(acc3)
 print(acc3[-1])     # returns the highest element in the list
+"""
 
+
+# GROUPBY
+''' Makes an iterator that returns consecutive keys and groups from an iterable. '''
+
+from itertools import groupby
+
+def less_than_3(x):
+    return x < 3
+
+a = [1, 2, 3, 4]
+group_obj = groupby(a, key = less_than_3)
+for key, value in group_obj:
+    print(key, list(value))     # returns a grouped output of all elements in the list </> 3
+# print(group_obj)
+# print(key, list(value))
