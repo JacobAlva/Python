@@ -79,12 +79,11 @@ print(acc3)
 print(acc3[-1])     # returns the highest element in the list
 """
 
-
 # GROUPBY
 ''' Makes an iterator that returns consecutive keys and groups from an iterable. '''
 
 from itertools import groupby
-
+"""
 def less_than_3(x):
     return x < 3
 
@@ -99,5 +98,38 @@ for key, value in group_obj:
 '''Lambdas are small single-line functions having an input, perform operations & provide an output '''
 # Lambdas can be used to reduce/improve the code above
 group_obj_lam = groupby(a, key = lambda x: x<3)
-for key, values in group_obj:
+for key, value in group_obj_lam:
     print(key, list(value))
+
+people = [
+    {"name": "John", 'age': 30},
+    {"name": "Alice", "age": 25},
+    {"name": "Bob", 'age': 30},
+    {"name": "Jerry", "age": 25}
+]
+
+group_p = groupby(people, key=lambda x: x["age"])
+for key, value in group_p:
+    print(key, list(value))
+
+#### for some reason, the above code did not group the dict entries by age, so I tried this:
+
+# Define a custom grouping function
+def group_by_age(person):
+    return person["age"]
+
+# Sort the list to ensure it's in the expected order
+people.sort(key=lambda x: x["age"])
+
+group_p = groupby(people, key=group_by_age)
+for key, value in group_p:
+    print(key, list(value))
+"""
+
+# INFINITE ITERATORS
+from itertools import count, cycle, repeat
+
+for i in count(5, 1):   # count(first_val, step[defaut step is 1])
+    print(i)
+    if (i == 30):       # break loop
+        break
