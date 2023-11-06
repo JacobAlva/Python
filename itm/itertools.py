@@ -5,6 +5,7 @@
 # Itertools offers some advanced iterator tools 
 
 """
+# PRODUCT
 from itertools import product
 a = [1,2]
 b = [3]
@@ -13,6 +14,7 @@ prod = product(a,b, repeat = 2)     # product with repitition # times
 print(list(prod))       
 
 
+E PERMUTATIONS
 from itertools import permutations
 # returns all possible orderings of an input
 a = [1,2,3,4]
@@ -31,9 +33,9 @@ perm1 = permutations(a, 2)
 p1L = list(perm1)
 print(p1L, len(p1L))
 
-"""
 
 
+# COMBINATIONS
 from itertools import combinations, combinations_with_replacement, permutations
 # returns all possible combinations of an iterable with a specified length
 
@@ -49,4 +51,19 @@ print(list(comb_wr))
 perm = permutations(a, 2)
 print(list(perm))
 ''' Notice the differences between all three. Similar but different'''
+"""
 
+
+# ACCUMULATE
+''' The accumulate fxn makes an iterator that returns accumulated sums or any other binary fxn provided as input'''
+
+from itertools import accumulate 
+a = range(1,5)
+b = [i for i in a]      # comprehension
+#b.insert(0, (1,1))
+c = b[:1] + [1,1] + b[1:]   # splice and concat multiple lists
+print(c)
+acc = accumulate(c)
+print(list(a))
+print(list(acc))
+print(b)
