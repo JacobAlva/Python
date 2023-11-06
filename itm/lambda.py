@@ -9,3 +9,8 @@ print(add10(5))
 def func_add10(x):
     return x + 10
 print(func_add10(5))
+
+# multiple arguments lambda function
+mult = lambda x,y: x*y
+print(mult(2,7))
+
