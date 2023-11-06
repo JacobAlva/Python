@@ -128,17 +128,27 @@ for key, value in group_p:
 
 # INFINITE ITERATORS
 from itertools import count, cycle, repeat
-
+"""
+# count
 for i in count(5, 1):   # count(first_val, step[defaut step is 1])
     print(i)
     if (i == 30):       # break loop
         break
 
-acyc = range(1,5)
+# cycle
+cyc = range(1,5)
 x = 0
-for i in cycle(acyc):
+for i in cycle(cyc):
     print(i)
     x+=1
     if x > 30:
         break
+"""
+# repeat
+rep = range(1,5)
 
+cds = repeat(rep, 3)
+print(list(cds))
+
+for i in repeat(rep[3], 3):     # indexing an element in the list
+    print(i)
