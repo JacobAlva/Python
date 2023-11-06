@@ -11,7 +11,7 @@ b = [3]
 prod = product(a,b)     # returns a unique combination of all elements 
 prod = product(a,b, repeat = 2)     # product with repitition # times
 print(list(prod))       
-"""
+
 
 from itertools import permutations
 # returns all possible orderings of an input
@@ -20,9 +20,9 @@ perm = permutations(a)
 print(perm)         # this retunrs an object from the library. Use an iterable (e.g. list to print out the output
 # print(list(perm), len(list(perm)))
 
-""" 
+''' 
 It is important to note that the permutations function returns an iterator, and when you convert it to a list using list(perm), it's exhausted. As a result, when you try to get the length using len(list(perm)), it returns 0 because the iterator has already been consumed. To get the correct length, you should store the permutations in a list before converting them to a list. Here's the corrected code:
-"""
+'''
 perm_list = list(perm)
 print(list(perm_list), len(perm_list))
 
@@ -30,4 +30,16 @@ print(list(perm_list), len(perm_list))
 perm1 = permutations(a, 2)
 p1L = list(perm1)
 print(p1L, len(p1L))
+
+"""
+
+
+from itertools import combinations
+# returns all possible combinations of an iterable with a specified length
+
+a = range(4, 12, 2)
+comb = combinations(a, 2)   # range(start, stop, step). A range is also an iterable
+print(a)
+print(list(comb))
+
 
