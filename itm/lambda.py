@@ -35,14 +35,23 @@ print(points2D_sorted_df)
 # to sort by sum of each tuple
 p2D_sorted_sum = sorted(points2D, key = lambda x: x[0] + x[1], reverse=True)    # returns the sort in reverse order
 print(p2D_sorted_sum)
-"""
+
 
 # MAP
 # map (func, seq)
 list1 = [1, 2, 3, 4, 5]
-list2 = map(lambda x: x*2, list1)
-print(list(list2))
+map1 = map(lambda x: x*2, list1)
+print(list(map1))
 
 # this can also be achieved with list comprehension
 list3 = [i*2 for i in list1]
 print(list3)
+"""
+
+
+#FILTER
+# filter(func, seq)
+'''The function returns True/False and the filter returns all True elements'''
+list4 = [1, 2, 3, 4, 5]
+fila = filter(lambda x: x % 2 == 0, list4)
+print(list(fila))       # cool way to get all the even numbers in a list
