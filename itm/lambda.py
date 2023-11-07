@@ -46,10 +46,9 @@ print(list(map1))
 # this can also be achieved with list comprehension
 list3 = [i*2 for i in list1]
 print(list3)
-"""
 
 
-#FILTER
+# FILTER
 # filter(func, seq)
 '''The function returns True/False and the filter returns all True elements'''
 list4 = [1, 2, 3, 4, 5]
@@ -59,3 +58,12 @@ print(list(fila))       # cool way to get all the even numbers in a list
 # similar result with list comprehension
 list5 = [i for i in list4 if i % 2 == 0]
 print(list5)
+"""
+
+
+# REDUCE
+'''Apply a function of two arguments cumulatively to the items of a sequence or iterable, from left to right, so as to reduce the iterable to a single value.'''
+from functools import reduce
+r2 = range(1,6)
+prod = reduce(lambda x,y: x*y, r2)
+print(prod)
