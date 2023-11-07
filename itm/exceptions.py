@@ -13,9 +13,15 @@
 
 # import somemodule   # ModuleNotFoundError - subclass from the ImportError
 
+# b = c       # NameError: 'c' is not defined
 
+#d = open('somefile.txt')        # FileNotFoundError
 
+e = [1,2,3,4]
+# print(e.remove(0))      # ValueError 0 not in list
+# print(e[5])     # IndexError - out of range
 
-
+f = {'name': 'Jon', 'last': 'Jenas'}
+# print(f['age'])     # KeyError
 
 
