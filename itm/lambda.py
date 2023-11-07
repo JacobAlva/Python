@@ -55,3 +55,7 @@ print(list3)
 list4 = [1, 2, 3, 4, 5]
 fila = filter(lambda x: x % 2 == 0, list4)
 print(list(fila))       # cool way to get all the even numbers in a list
+
+# similar result with list comprehension
+list5 = [i for i in list4 if i % 2 == 0]
+print(list5)
