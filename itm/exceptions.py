@@ -25,3 +25,10 @@ f = {'name': 'Jon', 'last': 'Jenas'}
 # print(f['age'])     # KeyError
 
 
+# RAISING AN EXCEPTION
+''' Force an exception to occur when a certain conditon is met'''
+
+# raising with if statement
+g = int(input("Enter a number: "))
+if g < 0:
+    raise Exception('Value should be positive.')
