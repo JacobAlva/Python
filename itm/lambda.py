@@ -1,7 +1,7 @@
 # lambda arguments: expression
 ''' Small, single-line anonymous function defined without a name.
     It starts with the 'lambda', takes in arguments then the expression. '''
-
+"""
 add10 = lambda x: x + 10
 print(add10(5))
 
@@ -35,3 +35,11 @@ print(points2D_sorted_df)
 # to sort by sum of each tuple
 p2D_sorted_sum = sorted(points2D, key = lambda x: x[0] + x[1], reverse=True)    # returns the sort in reverse order
 print(p2D_sorted_sum)
+"""
+
+# MAP
+# map (func, seq)
+list1 = [1, 2, 3, 4, 5]
+list2 = map(lambda x: x*2, list1)
+print(list(list2))
+
