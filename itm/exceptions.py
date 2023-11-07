@@ -29,6 +29,10 @@ f = {'name': 'Jon', 'last': 'Jenas'}
 ''' Force an exception to occur when a certain conditon is met'''
 
 # raising with if statement
-g = int(input("Enter a number: "))
-if g < 0:
-    raise Exception('Value should be positive.')
+# g = int(input("Enter a number: "))
+# if g < 0:
+#    raise Exception('Value should be positive.')
+
+# raising with assert
+h = 4
+assert (h % 2 == 0), "Value is not even."     # can be used for any specified condition
