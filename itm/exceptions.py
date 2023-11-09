@@ -61,3 +61,4 @@ except ZeroDivisionError as ex:
 # you can specify multiple excepts for a single try
 except TypeError as ex:     # this will print if the first except is not caught
     print(ex)
+    
