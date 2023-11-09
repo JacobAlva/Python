@@ -43,8 +43,8 @@ assert (h % 2 == 0), "Value is not even."     # can be used for any specified co
 ''' Ensures the code doesn't stop at a syntax error but continues to run the except block'''
 # try - except
 try:
-    i = 5/0    # ZeroDivisionError
-    j = 5 + "10"
+    i = 5/1    # ZeroDivisionError
+    j = 5 + 10
 
 # to print out a generic error message, good for security and should be same for all errors
 #except:
@@ -61,4 +61,9 @@ except ZeroDivisionError as ex:
 # you can specify multiple excepts for a single try
 except TypeError as ex:     # this will print if the first except is not caught
     print(ex)
-    
+
+else:           # runs if everything is fine
+    print("Everything is fine.")
+
+finally:        # prints with the every exception statement
+    print("Cleaning up...")   
