@@ -37,7 +37,7 @@ f = {'name': 'Jon', 'last': 'Jenas'}
 # raising with assert
 h = 4
 assert (h % 2 == 0), "Value is not even."     # can be used for any specified condition
-"""
+
 
 # HANDLING EXCEPTIONS
 ''' Ensures the code doesn't stop at a syntax error but continues to run the except block'''
@@ -67,3 +67,27 @@ else:           # runs if everything is fine
 
 finally:        # prints with the every exception statement
     print("Cleaning up...")   
+"""
+
+
+# DEFINING CUSTOM EXCEPTIONS
+class ValueTooHighError(Exception):
+    pass
+
+class ValueTooSmallError(Exception):
+    def __init__(self, message, value):
+        self.message = message
+        self.value = value
+
+def test_value(x):
+    if x > 100:
+        raise ValueTooHighError('value is too high')
+    if x < 5:
+        raise ValueTooSmallError('value is too small', x)
+    
+try:
+    test_value(200)
+except ValueTooHighError as ex1:
+    print(ex1)
+except ValueTooSmallError as ex1:
+    print(ex1.message, ex1.value)
