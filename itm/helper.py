@@ -4,4 +4,3 @@ import logging
 logger = logging.getLogger(__name__)
 logger.propagate = False        #stops default propagation
 logger.info('Hello from helper.')
-#logger.propagate = False!

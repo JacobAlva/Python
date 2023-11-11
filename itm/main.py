@@ -16,3 +16,29 @@ logging.info('This is an info message')
     To disable propagation, set it to "False" in the helper file.
 '''
 import helper
+
+# HANDLERS
+'''Handler objects are responsible for dispensing the appropriate block message to the handlers specific location for the objects'''
+
+logger = logging.getLogger(__name__)        # create logger in the module
+
+# create handler
+stream_h = logging.StreamHandler()              # logs to stream
+file_h = logging.FileHandler('file.log')        # logs to file
+
+# set level and the format
+stream_h.setLevel(logging.WARNING)
+file_h.setLevel(logging.ERROR)
+
+# specify formatter
+formatter = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
+stream_h.setFormatter(formatter)
+file_h.setFormatter(formatter)
+
+# add handler to logger
+logger.addHandler(stream_h)
+logger.addHandler(file_h)
+
+# testing the logger/handler
+logger.warning('This is a warning')
+logger.error('This is an error')
