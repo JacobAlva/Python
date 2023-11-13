@@ -42,3 +42,6 @@ logger.addHandler(file_h)
 # testing the logger/handler
 logger.warning('This is a warning')
 logger.error('This is an error')
+
+# added configuration
+''' For added configuration, a config file will be created. '''
