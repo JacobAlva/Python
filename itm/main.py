@@ -47,10 +47,14 @@ logger.error('This is an error')
 
 
 # added configuration
-''' For added configuration, a config file will be created (logging.conf) and imported into the project'''
+''' For added configuration, a config file will be created (logging.conf) and imported into the project.
+    This makes logging easier as you don't have to hardcode it or modify your code to fit it in.'''
 
 import logging.config
-logging.config.fileConfig('logging.conf')
+#logging.config.fileConfig('logging.conf')
+
+# you can also use a dictconfig instead of a fileConfig
+logging.config.dictConfig('logging.conf')
 
 logger = logging.getLogger('simpleExample')
 logger.debug('This is a debug message')
