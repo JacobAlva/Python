@@ -43,7 +43,6 @@ logger.addHandler(file_h)
 # testing the logger/handler
 logger.warning('This is a warning')
 logger.error('This is an error')
-"""
 
 
 # added configuration
@@ -58,3 +57,11 @@ logging.config.dictConfig('logging.conf')
 
 logger = logging.getLogger('simpleExample')
 logger.debug('This is a debug message')
+"""
+
+# for troblueshooting
+try:
+    a = [1,2,3]
+    val = a[4]  # returns a value error
+except IndexError as e:
+    logging.error(e, exc_info = True)
