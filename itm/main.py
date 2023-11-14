@@ -1,15 +1,16 @@
 import logging
 
+"""
 logging.basicConfig(level = logging.DEBUG, format = '%(asctime)s - %(name)s - %(levelname)s', datefmt='%m/%d/%Y %H:%M:%S')
 
 #logger.propagate = false
-"""
+'''
 logging.critical('This is a critical message')
 logging.debug('This is a debug message')
 logging.warning('This is a warning message')
 logging.error('This is an error message')
 logging.info('This is an info message')
-"""
+'''
 # this would import the logger from the helper module and print out the default logging details.
 ''' Creating this logger from helper creates an hierarchy of loggers starting at the root logger.
     All the other loggers get added to the heirarchy and propagate to the base logger by default.
@@ -42,6 +43,14 @@ logger.addHandler(file_h)
 # testing the logger/handler
 logger.warning('This is a warning')
 logger.error('This is an error')
+"""
+
 
 # added configuration
-''' For added configuration, a config file will be created. '''
+''' For added configuration, a config file will be created (logging.conf) and imported into the project'''
+
+import logging.config
+logging.config.fileConfig('logging.conf')
+
+logger = logging.getLogger('simpleExample')
+logger.debug('This is a debug message')
