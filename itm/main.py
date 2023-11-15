@@ -65,3 +65,4 @@ try:
     val = a[4]  # returns a value error
 except IndexError as e:
     logging.error(e, exc_info = True)
+    
