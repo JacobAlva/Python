@@ -71,14 +71,26 @@ except: # IndexError as e: cover for everything
 
 # ROTATING FILE HANDLER
 # log to file
-from logging.handlers import RotatingFileHandler
+#from logging.handlers import RotatingFileHandler
+
+# if the app will be running for a long time, you can use a timedRotatingFileHandler
+# that logs after a specific amount of time
+from logging.handlers import TimedRotatingFileHandler
+import time
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 # roll over after 2KB and keep backup loggs app.log.1, app.log.2, etc
-handler = RotatingFileHandler('app.log', maxBytes = 2000, backupCount = 5)
-logger.addHandler(handler)
+#handler = RotatingFileHandler('app.log', maxBytes = 2000, backupCount = 5)
+#logger.addHandler(handler)
 
-for _ in range (1000):          # _ means you don't care about it, for anything in range (1000)
+#for _ in range (1000):          # _ means you don't care about it, for anything in range (1000)
+#    logger.info('Hello, world!')
+
+# s-secs, m-mins, h, d, midnight, w0-Monday, w1-Tuesday, etc.
+handler = TimedRotatingFileHandler('timed_test.log', when = 's', interval = 5, backupCount = 5)
+
+for _ in range (6):          # _ means you don't care about it, for anything in range (1000)
     logger.info('Hello, world!')
+    time.sleep(5)       # wait 5 secs, then log again.
