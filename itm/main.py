@@ -60,10 +60,10 @@ logger.debug('This is a debug message')
 """
 
 # for troblueshooting
+import traceback
 try:
     a = [1,2,3]
     val = a[4]  # returns a value error
 except: # IndexError as e: cover for everything
-    logging.error(e, exc_info=True)
-
-immport traceba
+    # logging.error(e, exc_info=True)
+    logging.error("The error is %s", traceback.format_exc())
