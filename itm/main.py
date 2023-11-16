@@ -94,3 +94,7 @@ handler = TimedRotatingFileHandler('timed_test.log', when = 's', interval = 5, b
 for _ in range (6):          # _ means you don't care about it, for anything in range (1000)
     logger.info('Hello, world!')
     time.sleep(5)       # wait 5 secs, then log again.
+
+
+# if you are logging a lot of files, it is preferrable to log in json format using the
+# Python JSON logger library on GitHub
