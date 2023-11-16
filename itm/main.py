@@ -63,6 +63,7 @@ logger.debug('This is a debug message')
 try:
     a = [1,2,3]
     val = a[4]  # returns a value error
-except IndexError as e:
-    logging.error(e, exc_info = True)
-    
+except: # IndexError as e: cover for everything
+    logging.error(e, exc_info=True)
+
+immport traceba
