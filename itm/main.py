@@ -57,7 +57,7 @@ logging.config.dictConfig('logging.conf')
 
 logger = logging.getLogger('simpleExample')
 logger.debug('This is a debug message')
-"""
+
 
 # for troblueshooting
 import traceback
@@ -67,3 +67,18 @@ try:
 except: # IndexError as e: cover for everything
     # logging.error(e, exc_info=True)
     logging.error("The error is %s", traceback.format_exc())
+"""
+
+# ROTATING FILE HANDLER
+# log to file
+from logging.handlers import RotatingFileHandler
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+# roll over after 2KB and keep backup loggs app.log.1, app.log.2, etc
+handler = RotatingFileHandler('app.log', maxBytes = 2000, backupCount = 5)
+logger.addHandler(handler)
+
+for _ in range (1000):          # _ means you don't care about it, for anything in range (1000)
+    logger.info('Hello, world!')
