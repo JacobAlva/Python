@@ -2,6 +2,7 @@
 
 import json
 
+"""
 # Serialization / Encoding - The process of converting a Python dict to JSON format
 person = {"name": "Alice", "age": 30, "city": "New York", "hasChildren": False, "hobbies": ["reading", "hiking", "painting"]}
 
@@ -25,3 +26,23 @@ print(person1)      # python object.
 with open ('person.json', 'r') as file:
     person = json.load(file)
     print(person)
+"""
+
+
+class User:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+user = User('Max', 27)
+
+# custome encoding to make class object JSON serializable
+def encode_user(o):
+    if isinstance(o, User):
+        return {'name': o.name, 'age': o.age, o.__class__.__name__: True}
+    else:
+        raise TypeError('Object of type User is not JSON serializable')
+
+# without the fxn above ... it will return an error as the User's object type (class) is not JSON serializable
+userJSON = json.dumps(user, default=encode_user)
+print(userJSON)
