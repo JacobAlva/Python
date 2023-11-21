@@ -28,7 +28,6 @@ with open ('person.json', 'r') as file:
     print(person)
 """
 
-
 class User:
     def __init__(self, name, age):
         self.name = name
@@ -46,3 +45,19 @@ def encode_user(o):
 # without the fxn above ... it will return an error as the User's object type (class) is not JSON serializable
 userJSON = json.dumps(user, default=encode_user)
 print(userJSON)
+
+
+# another option by implementing a custom JSON Encoder
+from json import JSONEncoder
+class UserEncoder(JSONEncoder):
+    def default(self, o):
+        if isinstance(o, User):
+            return {'name': o.name, 'age': o.age, o.__class__.__name__: True}
+        return JSONEncoder.default(self, o)
+    
+userJSON_1 = json.dumps(user, cls=UserEncoder)
+print(userJSON_1)
+
+# you could also say
+userJSON_2 = UserEncoder().encode(user)
+print(userJSON_2)
