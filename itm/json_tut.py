@@ -61,3 +61,18 @@ print(userJSON_1)
 # you could also say
 userJSON_2 = UserEncoder().encode(user)
 print(userJSON_2)
+
+# to decode encoded objects
+user1 = json.loads(userJSON)
+print(user1)        # this is a python dictionary
+
+
+# using custom methods 
+def decode_user(dct):
+    if User.__name__ in dct:
+        return User(name=dct['name'], age=dct['age'])
+    return dct
+
+user2 = json.loads(userJSON, object_hook=decode_user)
+print(type(user2)) 
+print(user2.name)
