@@ -56,4 +56,17 @@ print(random.randint(1,10))
 '''
 """
 
+import secrets
+''' The secrets class is a true random class with only three methods, and can be used for passwords, security tokens and authentication'''
+
+sec1 = secrets.randbelow(10)      # Return a random int in the range (0, n-1). 
+print(sec1)
+
+sec2 = secrets.randbits(4)      # Generates an int(base 10) with k random bits.
+print(sec2)
+
+list4 = list("A,B,C,D,E,F,G")
+sec3 = secrets.choice(list4)       # Choose a random element from a non-empty sequence.
+
+
 
