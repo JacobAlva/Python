@@ -15,7 +15,7 @@ print(random.randrange(1, 5))   # similar to randint but doesn't include the upp
 
 c = random.normalvariate(0, 1)
 print(c)
-"""
+
 
 # lists and randoms
 list1 = list("ABCDEFGH")
@@ -31,3 +31,29 @@ print(list1)
 tups = (1,2,3,4,5,6)
 random.shuffle(tups)
 print(tups)
+
+
+# Pseudorandoms and seeds
+''' Remember, the random class are pseudo random numbers. This can be tested with the seed value which controls the randomness.'''
+
+random.seed(1)
+print(random.random())
+print(random.randint(1,10))
+random.seed(2)
+print(random.random())
+print(random.randint(1,10))
+random.seed(1)
+print(random.random())
+print(random.randint(1,10))
+random.seed(2)
+print(random.random())
+print(random.randint(1,10))
+
+'''
+    running this shows a repeat in the random values, indicating they are pseudorandom
+    random seed functions can be used to reproduce data.
+    Because the random class are reproduceable, they are not recommended to be used for security purposes, instead, use the secrets class.
+'''
+"""
+
+
