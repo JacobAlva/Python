@@ -54,7 +54,7 @@ print(random.randint(1,10))
     random seed functions can be used to reproduce data.
     Because the random class are reproduceable, they are not recommended to be used for security purposes, instead, use the secrets class.
 '''
-"""
+
 
 import secrets
 ''' The secrets class is a true random class with only three methods, and can be used for passwords, security tokens and authentication'''
@@ -68,5 +68,22 @@ print(sec2)
 list4 = list("A,B,C,D,E,F,G")
 sec3 = secrets.choice(list4)       # Choose a random element from a non-empty sequence.
 
+"""
 
+'''To work with arrays, you need to use the numpy module'''
+import numpy
 
+ar = numpy.random.rand(3)
+print(ar)
+#print(numpy.random.rand(3,3))       # returns a 3by3 array
+print(numpy.random.randint(0, 10, 4))       # creats a 4 element array between 1-10
+#print(numpy.random.randint(0, 10, (3,2,3)))
+arr = numpy.array([[1,2,3], [4,5,6], [7,8,9]])
+print(arr)
+numpy.random.shuffle(arr)   # shuffles the position but doesn't shuffle the array itself
+print(arr)
+
+arr2 = numpy.random.randint(0,10,(3,3))
+print(arr2)
+numpy.random.shuffle(arr2)
+print(arr2)
