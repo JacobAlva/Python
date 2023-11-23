@@ -67,12 +67,12 @@ print(sec2)
 
 list4 = list("A,B,C,D,E,F,G")
 sec3 = secrets.choice(list4)       # Choose a random element from a non-empty sequence.
-
 """
+
 
 '''To work with arrays, you need to use the numpy module'''
 import numpy
-
+"""
 ar = numpy.random.rand(3)
 print(ar)
 #print(numpy.random.rand(3,3))       # returns a 3by3 array
@@ -87,3 +87,14 @@ arr2 = numpy.random.randint(0,10,(3,3))
 print(arr2)
 numpy.random.shuffle(arr2)
 print(arr2)
+"""
+
+## seeding with numpy
+''' Although the numpy random generator is different from the standard python "random" module, by seeding, the function generates the same random numbers similar to the random function.'''
+# You should use the numpy random.seed() method instead of that from the random module.
+
+numpy.random.seed(1)
+print(numpy.random.rand(3,3))
+numpy.random.seed(1)
+print(numpy.random.rand(3,3))
+
