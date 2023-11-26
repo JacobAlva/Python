@@ -76,3 +76,4 @@ def decode_user(dct):
 user2 = json.loads(userJSON, object_hook=decode_user)
 print(type(user2)) 
 print(user2.name)
+
