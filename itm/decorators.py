@@ -1,12 +1,12 @@
-'''
+''' Decorator
     A decorator is a function that take another function as argument and extends the behaviour of the function without completely modifying it, thus allowing you to add new functionalities to the existing function.
 
     There are two diff decorators, function and plus decorators.
 '''
 
+import functools
 """
-# function decorators
-'''
+''' # function decorators
     Functions in Python are class objects. This means that, like any other object, they can be defined inside another function, passed as an argument to other functions or returned from a function.
 '''
 
@@ -30,9 +30,9 @@ def print_name():
 print_name()
 
 """
-
 def start_end_decorator1(func):
     
+    @functools.wraps(func)
     def wrapper(*args, **kwargs):
         print('Start')
         result = func(*args, **kwargs)
@@ -48,3 +48,23 @@ def add5(x):
 result = add5(10)
 print(result)
 
+
+# function identitiles
+print(help(add5))
+print(add5.__name__)
+# the results show that Python is confused about the real identity of this fxn
+# to fix that, import and use the functions
+
+''' Template
+    # This could be used as a decorator template for any function.
+
+    def my_decorator1(func):
+    
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        # Do something...
+        result = func(*args, **kwargs)
+        # Do something...
+        return result
+    return wrapper
+'''
