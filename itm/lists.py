@@ -129,3 +129,6 @@ print(list11)
 # like any for loop, you can manipulate the value of i depending on what you want in the list
 list12 = [i*i for i in list10]  # returns a square of every item in the list
 print(list12)
+
+print(max(list12))
+print(min(list12))
