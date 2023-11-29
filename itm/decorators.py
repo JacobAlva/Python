@@ -76,7 +76,7 @@ def repeat(num_times):
         @functools.wraps(func)
         def wrapper(*args, **kwargs):
             for _ in range(num_times):
-                result = func(*args, **args)
+                result = func(*args, **kwargs)
             return result
         return wrapper
     return decorator_repeat
