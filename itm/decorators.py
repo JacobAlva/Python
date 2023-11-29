@@ -29,7 +29,7 @@ def print_name():
 
 print_name()
 
-"""
+
 def start_end_decorator1(func):
     
     @functools.wraps(func)
@@ -69,3 +69,22 @@ print(add5.__name__)
     return wrapper
 '''
 
+"""
+
+def repeat(num_times):
+    def decorator_repeat(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            for _ in range(num_times):
+                result = func(*args, **args)
+            return result
+        return wrapper
+    return decorator_repeat
+
+
+@repeat(num_times=3)
+def greet(name):
+    print(f'Hello {name}')
+
+
+greet('Jacob')
