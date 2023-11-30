@@ -71,6 +71,7 @@ print(add5.__name__)
 
 """
 
+# decorators with arguments
 def repeat(num_times):
     def decorator_repeat(func):
         @functools.wraps(func)
