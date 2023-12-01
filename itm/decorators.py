@@ -152,8 +152,8 @@ say_hello()
 addOne()
 addOne()
 
-# Decorator Use cases
-'''
+
+''' # Decorator Use cases
     Timer decorator - calculate execution time of a function
     Debug decorator - print more info about code fxn and its arguments
     Check decorator - check if args meet some requirments and if they behave accordingly
@@ -161,4 +161,30 @@ addOne()
     Register functions like plugins with decorators
     Cache the return values
     Generate information and update the state of a function
+'''
+
+
+''' # Understanding *args and **kwargs
+    *args and **kwargs are ways to handle variable numbers of arguments in Python functions:
+
+    *args (stands for "arguments"):
+
+    Allows a function to accept any number of positional arguments.
+    Inside the function, args is a tuple containing all the passed positional arguments.
+    **kwargs (stands for "keyword arguments"):
+
+    Allows a function to accept any number of keyword arguments.
+    Inside the function, kwargs is a dictionary containing all the passed keyword arguments.
+    These are especially useful in decorators and other functions where you want to create flexible interfaces that work with a variety of input arguments.
+
+    Here’s an example to illustrate both:
+'''
+def example_func(*args, **kwargs):
+    print("Positional arguments:", args)
+    print("Keyword arguments:", kwargs)
+
+example_func(1, 2, 3, a="hello", b="world")
+
+'''
+    In this example, 1, 2, 3 are captured by *args as a tuple (1, 2, 3), and a="hello", b="world" are captured by **kwargs as a dictionary {'a': 'hello', 'b': 'world'}.
 '''
