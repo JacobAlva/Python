@@ -142,13 +142,23 @@ class CountCalls:
 def say_hello():
     print('Hello')
 
-say_hello()
-say_hello()
-say_hello()
-
 @CountCalls
 def addOne():
     print(1+1)
 
+say_hello()
+say_hello()
+say_hello()
 addOne()
 addOne()
+
+# Decorator Use cases
+'''
+    Timer decorator - calculate execution time of a function
+    Debug decorator - print more info about code fxn and its arguments
+    Check decorator - check if args meet some requirments and if they behave accordingly
+    ---
+    Register functions like plugins with decorators
+    Cache the return values
+    Generate information and update the state of a function
+'''
