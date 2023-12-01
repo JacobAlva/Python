@@ -5,6 +5,7 @@
 '''
 
 import functools
+from typing import Any
 """
 ''' # function decorators
     Functions in Python are class objects. This means that, like any other object, they can be defined inside another function, passed as an argument to other functions or returned from a function.
@@ -33,7 +34,7 @@ print_name()
 def start_end_decorator1(func):
     
     @functools.wraps(func)
-    def wrapper(*args, **kwargs):
+    def wrapper(*args, **kwargs):   # kwargs = key word arguments
         print('Start')
         result = func(*args, **kwargs)
         print('End')
@@ -87,7 +88,7 @@ def greet(name):
     print(f'Hello {name}')
 
 greet('Jacob')
-"""
+
 
 # Nexted decorators or Multiple Decorators
 def startend_dec(func):
@@ -120,4 +121,34 @@ def say_hello(name):
 
 say_hello('Alex')
 
+"""
 
+
+# Class Decorators
+# they are used if you want to maintain and update a state
+
+class CountCalls:
+
+    def __init__(self, func):
+        self.func = func
+        self.num_calls = 0
+
+    def __call__(self, *args, **kwargs):
+        self.num_calls += 1
+        print(f'The function "{self.func.__name__}" has been executed {self.num_calls} times')
+        return self.func(*args, **kwargs)
+    
+@CountCalls
+def say_hello():
+    print('Hello')
+
+say_hello()
+say_hello()
+say_hello()
+
+@CountCalls
+def addOne():
+    print(1+1)
+
+addOne()
+addOne()
