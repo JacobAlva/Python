@@ -177,7 +177,7 @@ addOne()
     Inside the function, kwargs is a dictionary containing all the passed keyword arguments.
     These are especially useful in decorators and other functions where you want to create flexible interfaces that work with a variety of input arguments.
 
-    Here’s an example to illustrate both:
+    Here’s an example to illustrate both: 
 '''
 def example_func(*args, **kwargs):
     print("Positional arguments:", args)
