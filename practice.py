@@ -459,3 +459,41 @@ if __name__ == '__main__':
     main()
 """
 
+
+# ***************************
+### CHAPTER 7 - LIST AND TUPLES ###
+
+
+# Graph with matplotlib
+"""
+import matplotlib.pyplot as plt
+
+def main():
+    x_coords = [0, 1, 2, 3, 4]
+    y_coords = [0, 3, 1, 5, 2]
+
+    # Build the graph
+    plt.plot(x_coords, y_coords, marker='')
+
+    # Add title
+    plt.title('Sample Data')
+
+    # Add labels to the axis
+    plt.xlabel('Product')
+    plt.ylabel('Price')
+
+    #Set the axis limits
+    plt.xlim(xmin=-1, xmax=10)
+    plt.ylim(ymin=-1, ymax=6)
+
+    # Add grid
+    plt.grid(True)
+
+    # Display the graph
+    plt.show()
+
+# Display the graph
+if __name__ == '__main__':
+    main()
+"""
+
