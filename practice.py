@@ -497,3 +497,35 @@ if __name__ == '__main__':
     main()
 """
 
+
+# Table with list
+"""
+def main():
+    list_size = 5
+    a = [0] * list_size
+    b = [0] * list_size
+    print(f'A = {a} \nB = {b}')
+
+    c = foo(a, b, list_size)
+
+    print(f'A = {a} \nB = {b}')
+    fool(a, b, c, list_size)
+    print("\n Good bye")
+
+def foo(arg_a, arg_b, arg_size):
+    c = [0] * arg_size
+    for i in range(arg_size):
+        arg_a[i] = i * 3
+        arg_b[i] = i * 2
+        c[i] = arg_a[i] + arg_b[i]
+    return c
+
+def fool(a, b, c, arg_size):
+    print("A\tB\tC")
+    print("===========")
+    for i in range(arg_size):
+        print(f'{a[i]}\t{b[i]}\t{c[i]}')
+
+if __name__ == '__main__':
+    main()
+"""
