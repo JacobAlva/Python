@@ -391,3 +391,62 @@ if __name__ == '__main__':
 """
 
 
+# Barista - Calculate gross pay
+""""""
+# Chapter 7, Program 7-7, p. 384, Barista Pay
+
+
+# Pseudocode
+# Define the data entry function to collect user input of name, hours worked, and rate
+# Validate user input and append to list
+# Repeat process until user stops
+# Derive the total number of entries accepted
+# Return lists containing, names, hours worked, pay rate, and total number of entries
+# Define function to calculate gross, tax and net
+# Iterate over passed list and append output to respective list
+# Return gross, tax and net salary
+# Define function to display result  with name, hours, rate, gross, tax, net and size parameters
+# Define the main function to call the data entry function
+# Pass the output to the calculator function
+# Pass the output to the display function
+# Call the main function.
+
+def data_entry():
+    # create empty list to accept user input
+    name_list = []
+    hrs_wkd_list = []
+    pay_rate_list = []
+
+    # get user data until user stops
+    again = 'y'
+    while again.lower() == 'y':
+        name_list.append(input("Enter employee name: "))
+
+        # get hours worked, validate input and append to list
+        get_hrs = input('Enter number of hours worked: ')
+        a = get_hrs.replace('.', '', 1)
+        while a.isdigit() == False:
+            print('Number of hours worked should be in digits.')
+            get_hrs = input('Enter number of hours worked: ')
+            a = get_hrs.replace('.', '', 1)
+        hrs_wkd_list.append(float(get_hrs))
+
+        # get hourly rate, validate input and append to list
+        get_rate = input('Enter employee hourly pay rate: ')
+        b = get_rate.replace('.', '', 1)
+        while b.isdigit() == False:
+            print('Pay rate should be in digits.')
+            get_rate = input('Enter number of hours worked: ')
+            b = get_hrs.replace('.', '', 1)
+        pay_rate_list.append(float(get_rate))
+
+        # Check if user has more input and repeat
+        again = input('Do you want to enter more data, (y/n)? ')
+
+    # get total entries processed
+    total_entries = len(name_list)
+
+    # Display total entries processed
+    print(f'\nTotal entries processed: {total_entries}')
+
+    return name_list, hrs_wkd_list, pay_rate_list, total_entries
