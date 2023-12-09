@@ -168,11 +168,11 @@ addOne()
     *args and **kwargs are ways to handle variable numbers of arguments in Python functions:
 
     *args (stands for "arguments"):
-
     Allows a function to accept any number of positional arguments.
     Inside the function, args is a tuple containing all the passed positional arguments.
     **kwargs (stands for "keyword arguments"):
 
+    **kwargs (keyword arguments)
     Allows a function to accept any number of keyword arguments.
     Inside the function, kwargs is a dictionary containing all the passed keyword arguments.
     These are especially useful in decorators and other functions where you want to create flexible interfaces that work with a variety of input arguments.
