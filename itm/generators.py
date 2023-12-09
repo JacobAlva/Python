@@ -83,7 +83,7 @@ print(sys.getsizeof(firstn(1000)))
 print(sys.getsizeof(firstn_generator(1000)))
 
 ''' another advantage of generators is that you do not have to wait for all the values to be generated before you start to use them.'''
-"""
+
 
 # Fibonacci sequence with Generators
 
@@ -98,3 +98,20 @@ fib = fibonacci(30)
 #print(next(fib))
 for i in fib:
     print(i)
+"""
+
+
+# generator comprehension
+
+generator1 = (i for i in range(10000) if i % 2 == 0)
+#for i in generator1:
+#    print(i)
+print(type(generator1))
+#print(list(generator1))
+print(sys.getsizeof(generator1))
+
+# list comprehension
+mylist = [i for i in range(10000) if i % 2 == 0]
+#print(mylist)
+print(sys.getsizeof(mylist))
+# converting generator to list
