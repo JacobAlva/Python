@@ -27,9 +27,29 @@ print(value)
 ''' A generator will raise a StopIteration error if it doesn't reach another yield statement. .'''
 value = next(g)     
 print(value)
-"""
 
 # gen as input to other functions that takee iterables
 #print(sum(g))
 print(sorted(g))       # returns a new list with the items of the generator in a sorted order.
 print(g)
+"""
+
+# Understanding the execution of a generator
+
+def countdown(num):
+    print('Starting...')
+    while num > 0:
+        yield num
+        num -= 1
+
+cd = countdown(4)
+
+value = next(cd)
+print(value)
+
+print(next(cd))
+print(next(cd))
+print(next(cd))
+print(next(cd))     # returns a StopIteration error
+
+
