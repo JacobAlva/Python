@@ -32,7 +32,7 @@ print(value)
 #print(sum(g))
 print(sorted(g))       # returns a new list with the items of the generator in a sorted order.
 print(g)
-"""
+
 
 # Understanding the execution of a generator
 
@@ -51,5 +51,26 @@ print(next(cd))
 print(next(cd))
 print(next(cd))
 print(next(cd))     # returns a StopIteration error
+"""
 
+# Application of generators
 
+def firstn(n):
+    nums = []
+    num = 0
+    while num < n:
+        nums.append(num)
+        num += 1
+    return nums
+
+def firstn_generator(n):    # more memory efficient as it doesn't require the list
+    num = 0
+    while num < n:
+        yield num
+        num += 1
+
+print(sum(firstn(10)))
+#fn = firstn_generator(10)
+#print(sum((fn)))
+print(sum(firstn_generator(10)))
+print(sum(range(1,10))) # testing
