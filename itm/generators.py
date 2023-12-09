@@ -57,6 +57,7 @@ print(next(cd))     # returns a StopIteration error
 
 # Application of generators
 
+"""
 def firstn(n):
     nums = []
     num = 0
@@ -82,3 +83,18 @@ print(sys.getsizeof(firstn(1000)))
 print(sys.getsizeof(firstn_generator(1000)))
 
 ''' another advantage of generators is that you do not have to wait for all the values to be generated before you start to use them.'''
+"""
+
+# Fibonacci sequence with Generators
+
+def fibonacci(limit):
+    # 0 1 1 2 3 5 8 13...
+    a, b = 0, 1
+    while a < limit:
+        yield a
+        a, b = b, a+b
+
+fib = fibonacci(30)
+#print(next(fib))
+for i in fib:
+    print(i)
