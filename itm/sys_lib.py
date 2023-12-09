@@ -3,6 +3,15 @@
 
 import sys
 
+# compare the size of tuple and list in "bytes"
+tuple8 = ("what", "is", "your", "name?", 373, "watermelon")
+list3 = ["what", "is", "your", "name?", 373, "watermelon"]
+print(sys.getsizeof(tuple8), "bytes")
+print(sys.getsizeof(list3), "bytes")
+# the results show that a tuple is more memory efficient
+
+
+
 
 # compare the size of two functions using the 'getsizeof' method
 def firstn(n):
