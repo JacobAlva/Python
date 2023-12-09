@@ -107,11 +107,22 @@ generator1 = (i for i in range(10000) if i % 2 == 0)
 #for i in generator1:
 #    print(i)
 print(type(generator1))
-#print(list(generator1))
+#print(list(generator1))                # converting generator to list
 print(sys.getsizeof(generator1))
 
-# list comprehension
-mylist = [i for i in range(10000) if i % 2 == 0]
+
+mylist = [i for i in range(10000) if i % 2 == 0]        # list comprehension
 #print(mylist)
 print(sys.getsizeof(mylist))
-# converting generator to list
+
+
+#NOTE
+'''
+    It is important to note that the sys.getsizeof() returns the size of the generator object itself, not the size of all items it can generate. This is why it shows a much smaller size compared to the list, which generates a complete list in memory.
+
+        print(sys.getsizeof(firstn(1000000)))               # This gives the size of the entire list in memory.
+        print(sys.getsizeof(firstn_generator(1000000)))     # This gives the size of the generator object itself.
+
+    To illustrate the memory efficiency of a generator, you'd typically compare the memory used when iterating over the list vs. iterating over the generator. However, sys.getsizeof() isn't the right tool for measuring the memory usage of all items yielded by a generator, as it doesn't accumulate the size of each item generated.
+
+'''
