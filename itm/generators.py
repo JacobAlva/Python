@@ -3,9 +3,10 @@
 '''
 
 def mygenerator():
-    yield 1
+    yield 11
     yield 2
     yield 3
+    #return 5
 
 g = mygenerator()
 
@@ -27,3 +28,8 @@ print(value)
 value = next(g)     
 print(value)
 """
+
+# gen as input to other functions that takee iterables
+#print(sum(g))
+print(sorted(g))       # returns a new list with the items of the generator in a sorted order.
+print(g)
