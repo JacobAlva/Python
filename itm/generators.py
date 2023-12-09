@@ -2,6 +2,8 @@
     Generators are functions that return an object that can be iterated over. The generate the item inside the object lazily i.e. they generate only one at a time and only when you ask for it making them more memory efficient when dealing with large data sets. They are defined like normal functions but with a yield keyword instead of the return
 '''
 
+import sys
+
 def mygenerator():
     yield 11
     yield 2
@@ -74,3 +76,9 @@ print(sum(firstn(10)))
 #print(sum((fn)))
 print(sum(firstn_generator(10)))
 print(sum(range(1,10))) # testing
+
+# testing the size & memory efficiency of the two methods
+print(sys.getsizeof(firstn(1000)))
+print(sys.getsizeof(firstn_generator(1000)))
+
+''' another advantage of generators is that you do not have to wait for all the values to be generated before you start to use them.'''
