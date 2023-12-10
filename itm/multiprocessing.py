@@ -46,6 +46,7 @@ from multiprocessing import Process
 import os
 import time
 
+"""
 def square_numbers():
     for i in range(100):
         i * i
@@ -67,3 +68,34 @@ for p in processes:
 # join
 for p in processes:
     p.join()
+
+print('End main')
+"""
+
+from threading import Thread
+
+
+def square_numbers():
+    for i in range(100):
+        i * i
+        time.sleep(0.1)
+
+    
+threads = []
+num_threads = os.cpu_count()
+print(f'The number of CPUs are {num_threads}')
+
+# create threads
+for i in range(num_threads):
+    t = Process(target=square_numbers)
+    threads.append(t)
+
+# start 
+for t in threads:
+    t.start()
+
+# join
+for t in threads:
+    t.join()
+
+print('End main')
