@@ -2,6 +2,7 @@
 
 from threading import Thread, Lock
 import time
+from queue import Queue
 
 """
 def square_numbers():
@@ -26,7 +27,7 @@ if __name__ == "__main__":
         thread.join()
 
     print('end main')
-"""
+
 
 # sharing data between threads
 
@@ -66,4 +67,24 @@ if __name__ == "__main__":
     thread2.join()
 
     print('end value', database_value)
+    print('end main')
+"""
+
+# working with queues
+if __name__ == '__main__':
+
+    q = Queue()
+
+    q.put(1)
+    q.put(2)
+    q.put(3)
+
+    # 3 2 1 >
+    first = q.get()
+    print(first)
+
+    q.task_done()       # tells the program we're done processing the queue
+    q.join()            # blocks the main thread until all elements in queue are processed.
+    q.empty()           # returns True if queue is empty
+
     print('end main')
