@@ -42,7 +42,7 @@
 '''
 
 
-from multiprocessing import Process, Value, Array, Lock, Queue
+from multiprocessing import Process, Value, Array, Lock, Queue, Pool
 import os
 import time
 
@@ -192,6 +192,7 @@ if __name__ == "__main__":
 
 
 # sharing a queue between multiple processes
+"""
 def square(numbers, queue):
     for i in numbers:
         queue.put(i*i)
@@ -216,3 +217,29 @@ if __name__ == "__main__":
 
     while not q.empty():
         print(q.get())
+"""
+
+
+
+# Process Pool
+'''
+    A process pool can be used to manage multiple processes. A process pool object controls a pool of worker processes to which jobs can be submitted and it can manage the available processes for you e.g. split data into smaller chunks which can then be processed in parallel by other processes. 
+'''
+
+def cube(number):
+    return number * number * number
+
+if __name__ == "__main__":
+    numbers = range(10)
+    pool = Pool()
+
+    # map, apply, join, close
+    result = pool.map(cube, numbers)
+    
+    # to have just one element processed by the pool
+    #pool.apply(cube, numbers[0])
+
+    pool.close()
+    pool.join()
+
+    print(result)
