@@ -531,3 +531,7 @@ if __name__ == '__main__':
 """
 
  
+ # table print format
+var: str = 'Python'     # type annotation | provides a hint of the variable type
+print(f'{var:_<20}')
+#print(type(var))
