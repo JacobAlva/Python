@@ -57,8 +57,8 @@ if __name__ == "__main__":
     lock = Lock()
     print('start value', database_value)
 
-    thread1 = Thread(target = increase, args=(lock,))  # the lock prevents another thread from...
-    thread2 = Thread(target = increase, args=(lock,))       # this also works > increase(lock)
+    thread1 = Thread(target = increase, args=(lock,))  # the lock prevents another thread from... ## the trailing comma is to tell Python this is a single element tuple
+    thread2 = Thread(target = increase, args=(lock,))
 
     thread1.start()
     thread2.start()
