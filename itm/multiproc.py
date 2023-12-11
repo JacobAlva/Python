@@ -70,7 +70,7 @@ for p in processes:
     p.join()
 
 print('End main')
-"""
+
 
 from threading import Thread
 
@@ -97,3 +97,32 @@ for t in threads:
     t.join()
 
 print('End main')
+"""
+
+'''----------------------------------------------------------'''
+
+# Multiprocessing
+
+def square_numbers():
+    for i in range(1000):
+        i * i
+
+if __name__ == "__main__":
+    processes = []
+    num_processes = os.cpu_count()      # returns the num of CPUs on the machine. Usually a good choise for the number of processes.
+    print(f'The number of CPUs are {num_processes}')
+
+
+    # create processes and assign a function for each process
+    for i in range(num_processes):
+        proc = Process(target=square_numbers)
+        processes.append(proc)
+
+    # start all processes
+    for proc in processes:
+        proc.start()
+
+    # wait for all processes to finish
+    # block the main program until these processes are finished
+    for proc in processes:
+        proc.join()
