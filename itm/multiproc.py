@@ -42,7 +42,7 @@
 '''
 
 
-from multiprocessing import Process
+from multiprocessing import Process, Value, Array, Lock
 import os
 import time
 
@@ -103,6 +103,7 @@ print('End main')
 
 # Multiprocessing
 
+""" multp
 def square_numbers():
     for i in range(1000):
         i * i
@@ -126,3 +127,37 @@ if __name__ == "__main__":
     # block the main program until these processes are finished
     for proc in processes:
         proc.join()
+"""
+
+# sharing data between processes
+'''
+    While data can be shared easily between threads with a global variable as multiple threads within the same process reference the same memory, processes however don't leave in the same memory space and thus, don't have access to the same data. 
+    There are two shared memory objects that can be used to share data between processes, Values and Arrays.
+'''
+
+# sharing a single value between processes
+def add_100(number, lock):
+    for i in range(100):
+        time.sleep(0.001)
+        with lock:
+            number.value += 1
+
+if __name__ == "__main__":
+
+    lock = Lock()
+    shared_number = Value('i', 0)
+    print('Number at beginning is', shared_number.value)
+
+    p1 = Process(target=add_100, args=(shared_number,lock))
+    p2 = Process(target=add_100(shared_number,lock))
+
+    p1.start()
+    p2.start()
+
+    p1.join()
+    p2.join()
+
+    print('number at end is', shared_number.value)
+    # if the output at this point is not 200, then a race conditon has occurred due to multiple processes accessing/modifying the shared variable (number.value) simultaneously. To prevent this, we must use a Lock.
+
+    
