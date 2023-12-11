@@ -1,6 +1,6 @@
 # sharing data between threads
 
-from threading import Thread, Lock
+from threading import Thread, Lock, current_thread
 import time
 from queue import Queue
 
@@ -68,7 +68,7 @@ if __name__ == "__main__":
 
     print('end value', database_value)
     print('end main')
-"""
+
 
 # working with queues
 if __name__ == '__main__':
@@ -87,4 +87,34 @@ if __name__ == '__main__':
     q.join()            # blocks the main thread until all elements in queue are processed.
     q.empty()           # returns True if queue is empty
 
+    print('end main')
+"""
+
+# queue use case
+
+def worker(q, lock):
+    while True:
+        value = q.get()
+        #processing
+        with lock:
+            print(f'in {current_thread().name} got {value}')
+        q.task_done()
+
+
+if __name__ == "__main__":
+
+    q = Queue()
+    lock = Lock()
+    num_threads = 10
+
+    for i in range(num_threads):
+        thread = Thread(target=worker, args=(q, lock))
+        thread.daemon=True          # this is a background thread that will die when the main thread dies. this helps to exit the while loop above.
+                                    # thread.daemon=False by default and we would need some statement e.g. "if (some condition): break" to exit the loop
+        thread.start()
+    
+    for i in range(1, 21):
+        q.put(i)
+    
+    q.join()
     print('end main')
