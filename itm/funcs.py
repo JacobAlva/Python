@@ -35,7 +35,6 @@ clips(a=1, b=2, cc=3)
 clips(cc=1, b=2, a=3)    # with keyword arguments, the position are not important but the keywords must be same as the parameters
 clips(1, b=2, cc=3)       # TypeError - multiple values for argument 'a' as it has been used as a positional argument 
 
-"""
 
 # Default arguments
 def clips(a, b=2, cc, d=4):
@@ -47,3 +46,24 @@ clips(1,2,3,7)      # the default value can be overwritten at the point of call.
 
 def clipa(a, b=2, cc, d=4):          # default values can only be used at the end of the declaration. non-default argument cannot follow default argument.
     print(a, b, cc, d)
+"""
+
+# Variable length arguments
+'''
+    if you mark a parameter with '*', you can pass any number of positional arguments to your function 
+    and ** allows you to pass any number of keyword arguments to the function. 
+    They are typically called *args and **kwargs but can be called anything
+    The *args is a tuple while the **kwargs is a dictionary
+'''
+def varle(a, b, *args, **kwargs):
+    print(a, b)
+    for arg in args:
+        print(arg)
+    #for keey in kwargs:
+    #    print(keey, kwargs[keey])
+    for key, val in kwargs.items():
+        print(key,":", val)
+
+#varle(1, 2, 3, 4, 5, six = 6, sev = 7)
+varle(1, 2, six = 6, sev = 7)               # You can skip any of the variable length arguments
+#varle(1, 2, 3, six=4, 5)                     # positional argument can't follow keyword argument
