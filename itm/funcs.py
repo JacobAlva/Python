@@ -15,3 +15,10 @@
     - Parameter passing (by value or by reference?)
 """
 
+# Parameters & Arguments
+def print_name(name):           # parameter
+    print(f"Your name is {name}")
+
+print_name('Fred')              # argument
+
+
