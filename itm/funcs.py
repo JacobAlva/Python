@@ -15,6 +15,7 @@
     - Parameter passing (by value or by reference?)
 """
 
+"""
 # Parameters & Arguments
 def print_name(name):           # parameter
     print(f"Your name is {name}")
@@ -32,5 +33,17 @@ clips(1, 2, 3)          # these are positional arguments
 clips(a=1, b=2, cc=3)
 #clips(1, b=2, 3)        # SyntaxError - Positional argument cannot appear after keyword arguments
 clips(cc=1, b=2, a=3)    # with keyword arguments, the position are not important but the keywords must be same as the parameters
-clips(1, b=2, a=3)       # TypeError - multiple values for argument 'a' as it has been used as a positional argument 
+clips(1, b=2, cc=3)       # TypeError - multiple values for argument 'a' as it has been used as a positional argument 
 
+"""
+
+# Default arguments
+def clips(a, b=2, cc, d=4):
+    print(a, b, cc, d)
+
+clips(1,2,3)        # auto joins the default value
+clips(1,2,3,7)      # the default value can be overwritten at the point of call.
+    
+
+def clipa(a, b=2, cc, d=4):          # default values can only be used at the end of the declaration. non-default argument cannot follow default argument.
+    print(a, b, cc, d)
