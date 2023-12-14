@@ -22,3 +22,15 @@ def print_name(name):           # parameter
 print_name('Fred')              # argument
 
 
+# Positional & Keyword arguments
+def clips(a, b, cc):
+    print(a, b, cc)
+
+clips(1, 2, 3)          # these are positional arguments 
+# positional arguments assign the arguments to the parameters based on their position
+
+clips(a=1, b=2, cc=3)
+#clips(1, b=2, 3)        # SyntaxError - Positional argument cannot appear after keyword arguments
+clips(cc=1, b=2, a=3)    # with keyword arguments, the position are not important but the keywords must be same as the parameters
+clips(1, b=2, a=3)       # TypeError - multiple values for argument 'a' as it has been used as a positional argument 
+
