@@ -90,3 +90,18 @@ def forand(*args):
         print(arg)
 forand()
 """
+
+# Unpacking arguments
+
+''' You can unpack an iterable into a function's argument'''
+
+def samp(a, b, c):
+    print(a, b, c)
+
+list1 = [1, 2, 3]       # the iterable must be the same length as the function's parameters
+tuple1 = (3, 4, 5)
+dict1 = {'a':6, 'b':7, 'c':8}       # for dicionaries, it must have the same keys as the declared parameters
+
+samp(*list1)
+samp(*tuple1)
+samp(**dict1)        # use a **kwarg for dictionaries, else, it will print the keys
