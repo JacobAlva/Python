@@ -126,7 +126,8 @@ def samp1():
 number = 0
 samp1()
 print(number)   # returns 3 as the global value of 'number'
-"""
+
+
 def samp2():
     # opA
     #number = 3      # this is a local variable and doesn't affect the global value of number.
@@ -140,3 +141,32 @@ def samp2():
 number = 0      # this becomes useless in opB
 samp2()
 print('global num:', number)
+"""
+
+# Parameter passing | Dealing with mutable and immutable objects
+# mutable objects can be modified within a function while immutable objects cannot, they can rather be changed/reassigned
+# immutable objects within a mutable object can be changed
+
+def samp3(x):
+    x = 4     # creates a local variable 
+    print(x)    # reassigns the value of 4 to x 
+
+
+def samp4(xlist):
+    #opA
+    #xlist.append(5)    # creates a local variable 
+    #xlist[0] = 10
+    #print(xlist)
+
+    #opB - Mutable reference binding
+    #xlist = [20, 30, 40]        # this rebinds the reference and creates a local variable which has nothing to do with list4
+    #xlist.append(60)
+
+    #opC - Slight difference making huge impacts
+    #xlist += [20, 30, 40]       # appends to the list4
+    xlist = xlist + [20, 30, 40]    # doesn't affect the global list as it creates a new local list 
+
+list4 = [1, 2, 3]
+print('actual list:', list4)
+samp4(list4)
+print('after fxn:', list4)    # list4 has been updated. |   In opB, list4 remains the same because of 
