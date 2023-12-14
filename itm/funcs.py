@@ -92,7 +92,7 @@ forand()
 """
 
 # Unpacking arguments
-
+"""
 ''' You can unpack an iterable into a function's argument'''
 
 def samp(a, b, c):
@@ -105,3 +105,38 @@ dict1 = {'a':6, 'b':7, 'c':8}       # for dicionaries, it must have the same key
 samp(*list1)
 samp(*tuple1)
 samp(**dict1)        # use a **kwarg for dictionaries, else, it will print the keys
+"""
+
+
+# Local and Global variables
+"""
+def samp1():
+    # opA
+    # x = number
+    # number = 3      # this will raise an UnboundLocalError as the program attempts to reference a local variable before assignment above.
+    
+    #opB
+    # instead, use a global variable to retain/modify the value of number globally
+    global number
+    x = number      # refenrences the external global variable
+    number = 3      # assigns the value of three to the global variable now.
+    
+    print('number inside function:', x)
+
+number = 0
+samp1()
+print(number)   # returns 3 as the global value of 'number'
+"""
+def samp2():
+    # opA
+    #number = 3      # this is a local variable and doesn't affect the global value of number.
+
+    # opB
+    # to modify the global value, you will use the 'global' keyword to reference the global variable
+    global number
+    number = 5
+    print('num inside fxn:', number)
+
+number = 0      # this becomes useless in opB
+samp2()
+print('global num:', number)
