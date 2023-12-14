@@ -49,6 +49,7 @@ def clipa(a, b=2, cc, d=4):          # default values can only be used at the en
 """
 
 # Variable length arguments
+"""
 '''
     if you mark a parameter with '*', you can pass any number of positional arguments to your function 
     and ** allows you to pass any number of keyword arguments to the function. 
@@ -67,3 +68,25 @@ def varle(a, b, *args, **kwargs):
 #varle(1, 2, 3, 4, 5, six = 6, sev = 7)
 varle(1, 2, six = 6, sev = 7)               # You can skip any of the variable length arguments
 #varle(1, 2, 3, six=4, 5)                     # positional argument can't follow keyword argument
+"""
+
+# Forcing  keyword argument
+"""
+''' By using a *, it ensures that a max of two positional arguments are used, while the rest are keyword arguments'''
+def foo(a, b, *, c, d):
+    print(a, b, c, d)
+
+foo(1, 2, d=3, c=4)
+
+def forand(*args, last):
+    for arg in args:
+        print(arg)
+    print(last)
+forand(3, 5, last= 4)
+
+# you can pass an empty argument to a variable length only function
+def forand(*args):
+    for arg in args:
+        print(arg)
+forand()
+"""
