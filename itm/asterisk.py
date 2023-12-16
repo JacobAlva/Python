@@ -45,7 +45,6 @@ func(*list2)            # iterable must have the same length as function paramet
 
 dict2 = {'a':6, 'b':7, 'c':8}       # dict keys must be same as function parameters
 func(**dict2)
-"""
 
 
 # Container unpacking
@@ -58,6 +57,24 @@ beg, nxt, *las = numb
 print(beg)
 print(mid)
 print(las)
+"""
 
 
-#
+# Merge iterables into a list
+my_tuple = (1, 2, 3, 4)
+my_list = [4, 5, 6]
+my_set = {7, 8, 9}
+my_dict = {'a':10, 'b':11}
+
+new_list = (*my_tuple, *my_list, *my_set, *my_dict.values())        # returns the value of the dict, otherwise, *my_dict returns the keys
+print(new_list)
+print(type(new_list))
+print(my_dict.values())
+
+# To merge dictionaries
+dicta = {'a':10, 'b':11}
+dictb = {'c':12, 'd':13}
+# dictc = {*dicta, *dictb}    # this will return a set of the keys from the merger
+dictc = {**dicta, **dictb}      # returns the merged dictionaries as dicts
+print(type(dictc))
+print(dictc)
