@@ -1,5 +1,5 @@
 '''
-    Generators are functions that return an object that can be iterated over. The generate the item inside the object lazily i.e. they generate only one at a time and only when you ask for it making them more memory efficient when dealing with large data sets. They are defined like normal functions but with a yield keyword instead of the return
+    Generators are functions that return an object that can be iterated over. They generate the item inside the object lazily i.e. they generate only one at a time and only when you ask for it making them more memory efficient when dealing with large data sets. They are defined like normal functions but with a YIELD keyword instead of the return
 '''
 
 import sys

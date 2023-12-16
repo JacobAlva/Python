@@ -166,9 +166,10 @@ def samp4(xlist):
     #xlist += [20, 30, 40]       # appends to the list4
     xlist = xlist + [20, 30, 40]    # doesn't affect the global list as it creates a new local list 
 
-list4 = [1, 2, 3]
+list4 = [1, 2, 3, 9]
+list5 = ['ou', 'gfh', 'sde', 'yui']
 print('actual list:', list4)
 samp4(list4)
 print('after fxn:', list4)    # list4 has been updated. |   In opB, list4 remains the same because of 
 
-
+#print('Lowest is ', list5[list4.index(min(list4))])
