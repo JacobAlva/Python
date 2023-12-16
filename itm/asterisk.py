@@ -35,7 +35,6 @@ def kywd(a, b, *, c):
     print(a, b, c)
 
 kywd(1, 3, c=5)
-"""
 
 # Argument unpacking
 def func(a, b, c):
@@ -46,3 +45,19 @@ func(*list2)            # iterable must have the same length as function paramet
 
 dict2 = {'a':6, 'b':7, 'c':8}       # dict keys must be same as function parameters
 func(**dict2)
+"""
+
+
+# Container unpacking
+#numb = [1, 2, 3, 4, 5, 6]
+numb = (1, 2, 3, 4, 5, 6)
+
+#*beg, las, fir = numb        # the * will always unpack the elements into a list even if the referenced iterable is not a list
+beg, *mid, las = numb 
+beg, nxt, *las = numb
+print(beg)
+print(mid)
+print(las)
+
+
+#
