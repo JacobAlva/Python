@@ -16,7 +16,6 @@ rep = (1) * 5
 print(rep)
 rep = 'Paw' * 2
 print(rep)
-"""
 
 # for the *args & **kwargs arguments
 def foo(a, b, *args, **kwargs):
@@ -36,3 +35,14 @@ def kywd(a, b, *, c):
     print(a, b, c)
 
 kywd(1, 3, c=5)
+"""
+
+# Argument unpacking
+def func(a, b, c):
+    print(a, b, c)
+
+list2 = [1,2,3] 
+func(*list2)            # iterable must have the same length as function parameter
+
+dict2 = {'a':6, 'b':7, 'c':8}       # dict keys must be same as function parameters
+func(**dict2)
