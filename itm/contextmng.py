@@ -32,3 +32,25 @@ lock.release()      # you must say
 with lock:
     # do something
     a = 1
+
+# context manager as a class
+class ManagedFile:
+    def __init__(self, filename):
+        print('init')
+        self.filename = filename
+
+    def __enter__(self):
+        print('enter')
+        self.file = open(self.filename, 'w')
+        return self.file
+    
+    def __exit__(self, exc_type, exc_value, exc_traceback):
+        if self.file:
+            self.file.close()
+        print('exit')
+
+with ManagedFile('') as file:
+    print('do some stuff...')
+    file.write('soem to doo...')
+
+print('continuing...')
