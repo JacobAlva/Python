@@ -19,7 +19,7 @@ finally:              # executes with or without an exception
 """
 
 # Thread Locking
-
+"""
 from threading import Lock
 lock = Lock()
 
@@ -32,8 +32,10 @@ lock.release()      # you must say
 with lock:
     # do something
     a = 1
+"""
 
 # context manager as a class
+"""
 class ManagedFile:
     def __init__(self, filename):
         print('init')
@@ -49,8 +51,26 @@ class ManagedFile:
             self.file.close()
         print('exit')
 
-with ManagedFile('') as file:
+with ManagedFile('notes.txt') as file:
     print('do some stuff...')
-    file.write('soem to doo...')
+    file.write('some to doo...')
 
 print('continuing...')
+"""
+
+# implementing context manager as a function
+# using generators and decorators
+
+from contextlib import contextmanager
+
+@contextmanager
+def open_managed_file(filename):
+    f = open(filename, 'w')
+    try:
+        yield f
+    finally:
+        f.close()
+
+with open_managed_file('notesc.txt') as file:
+    file.write('someone got this..')
+    ''' after exiting the with statement, the function continues to run which then closes the file within the finally clause'''
