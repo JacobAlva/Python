@@ -33,7 +33,7 @@
 
 ''' # GIL - Global Interpreter Lock
     - GIL is a lock that allows only one thread at a time to execute in Python.
-    - Needed in CPython because memory management is not thread-safe.   #Avoid CPython, not safe.
+    - Needed in CPython because memory management is not thread-safe. #Avoid CPython, not safe.
 
     - Avoid:
         - Use multiprocessing
