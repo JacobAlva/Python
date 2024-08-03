@@ -60,6 +60,25 @@ def go_right():
     if head.direction != "left":
         head.direction = "right"
 
+def start_game():
+    global score, high_score, segments, delay
+    score = 0
+    high_score = 0
+    segments = []
+    delay = 0.1
+    head.direction = "stop"
+    head.goto(0, 0)
+    for segment in segments:
+        segment.goto(1000, 1000)
+    segments.clear()
+    pen.clear()
+    pen.write("Score: {}  High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal"))
+    food.goto(random.randint(-290, 290), random.randint(-290, 290))
+    wn.update()
+    wn.onkeypress(None, "Return")
+    wn.onkeypress(None, "space")
+    main_game_loop()
+
 def move():
     if head.direction == "up":
         y = head.ycor()
@@ -217,10 +236,16 @@ wn.onkeypress(go_left, "Left")
 wn.onkeypress(go_right, "Right")
 wn.onkeypress(start_game, "Return")
 wn.onkeypress(start_game, "space")
+wn.onkeypress(start_game, "Return")
+wn.onkeypress(start_game, "space")
 
-# Main game loop
-while True:
-    wn.update()
+def main_game_loop():
+    global score, high_score, segments, delay
+    while True:
+        wn.update()
+        # ... rest of the main game loop logic ...
+
+wn.mainloop()
 
     # Check for a collision with the border
     if head.xcor() > 290 or head.xcor() < -290 or head.ycor() > 290 or head.ycor() < -290:
