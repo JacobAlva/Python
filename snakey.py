@@ -76,13 +76,56 @@ def move():
     if head.direction == "right":
         x = head.xcor()
         head.setx(x + 20)
+# Functions
+def go_up():
+    if head.direction != "down":
+        head.direction = "up"
+
+def go_down():
+    if head.direction != "up":
+        head.direction = "down"
+
+def go_left():
+    if head.direction != "right":
+        head.direction = "left"
+
+def go_right():
+    if head.direction != "left":
+        head.direction = "right"
+
+def start_game():
+    global delay, score, high_score, segments
+    delay = 0.1
+    score = 0
+    high_score = 0
+
+    # Reset the snake's head
+    head.goto(0, 0)
+    head.direction = "stop"
+
+    # Hide the segments
+    for segment in segments:
+        segment.goto(1000, 1000)
+    segments = []
+
+    # Reset the score display
+    pen.clear()
+    pen.write("Score: 0  High Score: 0", align="center", font=("Courier", 24, "normal"))
+
+    # Move the food to a random spot
+    food.goto(random.randint(-290, 290), random.randint(-290, 290))
+
+    # Start the main game loop
+    main_game_loop()
 
 # Keyboard bindings
 wn.listen()
-wn.onkeypress(go_up, "w")
-wn.onkeypress(go_down, "s")
-wn.onkeypress(go_left, "a")
-wn.onkeypress(go_right, "d")
+wn.onkeypress(go_up, "Up")
+wn.onkeypress(go_down, "Down")
+wn.onkeypress(go_left, "Left")
+wn.onkeypress(go_right, "Right")
+wn.onkeypress(start_game, "Return")
+wn.onkeypress(start_game, "space")
 
 # Main game loop
 while True:
@@ -172,4 +215,5 @@ while True:
 
     time.sleep(delay)
 
+wn.mainloop()
 wn.mainloop()
