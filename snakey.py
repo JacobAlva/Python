@@ -249,6 +249,9 @@ wn.mainloop()
 
  # Check for a collision with the border
  if head.xcor() > 290 or head.xcor() < -290 or head.ycor() > 290 or head.ycor() < -290:
+
+ # Check for a collision with the border
+ if head.xcor() > 290 or head.xcor() < -290 or head.ycor() > 290 or head.ycor() < -290:
         time.sleep(1)
         head.goto(0, 0)
         head.direction = "stop"
