@@ -44,40 +44,6 @@ pen.goto(0, 260)
 pen.write("Score: 0  High Score: 0", align="center", font=("Courier", 24, "normal"))
 
 # Functions
-def go_up():
-    if head.direction != "down":
-        head.direction = "up"
-
-def go_down():
-    if head.direction != "up":
-        head.direction = "down"
-
-def go_left():
-    if head.direction != "right":
-        head.direction = "left"
-
-def go_right():
-    if head.direction != "left":
-        head.direction = "right"
-
-def start_game():
-    global score, high_score, segments, delay
-    score = 0
-    high_score = 0
-    segments = []
-    delay = 0.1
-    head.direction = "stop"
-    head.goto(0, 0)
-    for segment in segments:
-        segment.goto(1000, 1000)
-    segments.clear()
-    pen.clear()
-    pen.write("Score: {}  High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal"))
-    food.goto(random.randint(-290, 290), random.randint(-290, 290))
-    wn.update()
-    wn.onkeypress(None, "Return")
-    wn.onkeypress(None, "space")
-    main_game_loop()
 
 def move():
     if head.direction == "up":
@@ -234,10 +200,8 @@ wn.onkeypress(go_up, "Up")
 wn.onkeypress(go_down, "Down")
 wn.onkeypress(go_left, "Left")
 wn.onkeypress(go_right, "Right")
-wn.onkeypress(start_game, "Return")
-wn.onkeypress(start_game, "space")
-wn.onkeypress(start_game, "Return")
-wn.onkeypress(start_game, "space")
+wn.onkeypress(start_game, "Return")  # This line is correct and should remain
+wn.onkeypress(start_game, "space")  # This line is correct and should remain
 
 def main_game_loop():
     global score, high_score, segments, delay
@@ -334,5 +298,4 @@ wn.mainloop()
 
     time.sleep(delay)
 
-wn.mainloop()
-wn.mainloop()
+wn.mainloop()  # Only one call to mainloop() should remain
