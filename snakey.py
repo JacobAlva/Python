@@ -30,6 +30,9 @@ food.color("red")
 food.penup()
 food.goto(0, 100)
 
+# Initialize the segments list
+segments = []
+
 # Pen to write the score
 pen = turtle.Turtle()
 pen.speed(0)
